@@ -1,6 +1,6 @@
 import Form from 'next/form';
 
-export default function search({ query }: { query?: string }) {
+export default function Search({ query }: { query?: string }) {
   return (
     <Form action="/search">
       <input type="text" defaultValue={query} name="search-input" />
