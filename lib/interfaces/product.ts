@@ -25,3 +25,5 @@ export interface ProductResponse {
     skip: number;
     total: number;
 }
+
+export type Category = "womens-dresses" | "womens-shoes" | "womens-watches" | "womens-bags" | "womens-jewellery"| "mens-shirts" | "mens-shoes" | "mens-watches" | "tops" | "sunglasses";
