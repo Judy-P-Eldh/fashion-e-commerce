@@ -1,11 +1,9 @@
-import Footer from '@/components/footer';
 
 export default function Home() {
   return (
-    <main>
+    <main className="min-h-dvh">
       <section></section>
       <section></section>
-      <Footer />
     </main>
   );
 }
