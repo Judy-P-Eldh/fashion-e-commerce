@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import Navigation from '@/components/navigation';
 import Footer from '@/components/footer';
 
 //uppdate when we have a company/brand name
@@ -16,6 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <body>
+        <Navigation/>
+        {children}</body>
       <body>
         {children}
         <Footer />
