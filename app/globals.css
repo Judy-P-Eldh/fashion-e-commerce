@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #ffffff;
@@ -24,6 +24,33 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: [full-width-start] 1fr, [breakout-start] 1fr, [content-start] 2fr,
+    [content-end] 2fr, [breakout-end] 1fr, [full-width-end] 1fr;
+}
+
+.content-grid > :not(.breakout, .full-width),
+.full-width > :not(.breakout, .full-width) {
+  grid-column: content;
+}
+.content-grid > .breakout {
+  grid-column: breakout;
+}
+.full-width > .breakout {
+  grid-column: breakout;
+}
+.content-grid > .full-width {
+  grid-column: full-width;
+  display: grid;
+  grid-template-columns: inherit;
+}
+.full-width > .full-width {
+  grid-column: full-width;
+  display: grid;
+  grid-template-columns: inherit;
 }
 
 * {
