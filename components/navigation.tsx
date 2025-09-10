@@ -11,15 +11,19 @@ export default function Navigation() {
                     <li><Link href="#">SALE</Link></li>
                 </ul>
                 <picture className="flex items-center">
-                    <Image></Image>
+                    <Image
+                        src=""
+                        alt=""
+                        width={200}
+                        height={200}/>
                 </picture>
-                <div class="search">
+                <div>
                 </div>
                 <div className="flex gap-5">
                     <Link href="#"><img src="" alt="Profile" /></Link>
                     <Link href="#"><img src="" alt="Cart" /></Link>
                 </div>
             </nav>
-        </header>
+        </header >
     )
 }
