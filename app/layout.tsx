@@ -19,8 +19,6 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navigation/>
-        {children}</body>
-      <body>
         {children}
         <Footer />
       </body>
