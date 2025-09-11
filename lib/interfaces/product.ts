@@ -26,4 +26,6 @@ export interface ProductResponse {
     total: number;
 }
 
-export type Category = "womens-dresses" | "womens-shoes" | "womens-watches" | "womens-bags" | "womens-jewellery"| "mens-shirts" | "mens-shoes" | "mens-watches" | "tops" | "sunglasses";
+export const categories = ["womens-dresses" , "womens-shoes" , "womens-watches" , "womens-bags" , "womens-jewellery", "mens-shirts" , "mens-shoes" , "mens-watches" , "tops" , "sunglasses"] as const;
+
+export type Category = (typeof categories)[number];

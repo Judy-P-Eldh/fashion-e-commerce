@@ -3,14 +3,14 @@ import Link from 'next/link';
 
 export default function Navigation() {
   return (
-    <header className="">
+    <header className="content-grid">
       <nav>
         <ul className="flex justify-between items-center p-4">
           <li>
             <Link href="#">Home</Link>
           </li>
           <li>
-            <Link href="#">Collections</Link>
+            <Link href="/collections/women">Collections</Link>
           </li>
           <li>
             <Link href="#">SALE</Link>
@@ -22,11 +22,9 @@ export default function Navigation() {
         <div></div>
         <div className="flex gap-5">
           <Link href="#">
-            {' '}
             <Image src="" width={200} height={200} alt="Profile" />
           </Link>
           <Link href="#">
-            {' '}
             <Image src="" width={200} height={200} alt="Cart" />
           </Link>
         </div>
