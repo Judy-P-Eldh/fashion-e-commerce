@@ -9,10 +9,10 @@ export default function Footer() {
   ];
 
   return (
-    <footer>
+    <footer className='content-grid'>
       <aside></aside>
 
-      <nav className='grid grid-cols-4 gap-4'>
+      <nav className='grid breakout  grid-cols-4 gap-4'>
         <Image src="/logo" alt="logo" width={300} height={300} />
         <section>
           <h3>About</h3>

@@ -28,6 +28,7 @@ body {
 
 .content-grid {
   display: grid;
+  /*   we can set more accurate sizes when we have a design to follow */
   grid-template-columns: [full-width-start] 1fr, [breakout-start] 1fr, [content-start] 2fr,
     [content-end] 2fr, [breakout-end] 1fr, [full-width-end] 1fr;
 }
@@ -38,9 +39,11 @@ body {
 }
 .content-grid > .breakout {
   grid-column: breakout;
+  display: grid;
 }
 .full-width > .breakout {
   grid-column: breakout;
+  display: grid;
 }
 .content-grid > .full-width {
   grid-column: full-width;
