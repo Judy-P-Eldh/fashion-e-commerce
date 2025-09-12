@@ -4,7 +4,7 @@ import Search from './search';
 
 export default function Navigation() {
   return (
-    <header className="bg-green-200 h-60 grid text-black full-width grid-cols-3">
+    <header className="h-60 grid text-black full-width grid-cols-3">
       <nav className="grid">
         <ul className="flex justify-between items-center p-4">
           <li>

@@ -9,8 +9,8 @@ export default async function Home() {
   const firstForProducts = Array.isArray(products) ? products.slice(0, 4) : null;
 
   return (
-    <main className="full-width ">
-      <section className="content-grid">
+    <main className="content-grid">
+      <section className="full-width bg-[#D6CCC2]">
         <h2>Sign up for our newsletter</h2>
         <Form action="submit">
           <label htmlFor="email" className="sr-only">
@@ -19,14 +19,14 @@ export default async function Home() {
           <input type="text" />
         </Form>
       </section>
-      <section className="full-width">
+      <section className="breakout inherit">
         <h2>Best sellers</h2>
-        <ul>
+        <ul className="col-span-full flex justify-between">
           {firstForProducts?.map((p: Product) => {
             return (
-              <li key={p.id} className="text-white">
-                {p.title}
+              <li key={p.id} className="text-center">
                 <Image src={p.images[0]} alt={p.description} height={600} width={300}></Image>
+                {p.title}
               </li>
             );
           })}
