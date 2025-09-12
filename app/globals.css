@@ -1,15 +1,9 @@
 @import 'tailwindcss';
 
 :root {
-  --background: #ffffff;
+  --background: #F2EAE1;
   --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  
 }
 
 html,
@@ -30,28 +24,29 @@ body {
   display: grid;
   /*   we can set more accurate sizes when we have a design to follow */
   grid-template-columns:
-    [full-width-start] 1fr
+    [full-width-start] 5rem
     [breakout-start] 1fr
     [content-start] 1fr
     [content-end] 1fr
-    [breakout-end] 1fr
+    [breakout-end] 5rem
     [full-width-end];
+}
+
+.inherit {
+  display:grid;
+  grid-template-columns: inherit;
 }
 
 .content {
   grid-column: content-start / content-end;
-  display:grid;
 }
 
 .breakout {
   grid-column: breakout-start / breakout-end;
-  display: grid;
 }
 
 .full-width {
   grid-column: full-width-start / full-width-end;
-  display: grid;
-
 }
 
 * {
@@ -63,8 +58,3 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}

@@ -1,28 +1,20 @@
-import { isArray } from "util";
-import {
-  allowedCategories,
-  Category,
-  Product,
-  ProductResponse,
-} from "../interfaces/product";
+import { allowedCategories, Category, Product, ProductResponse } from '../interfaces/product';
 
-const endpoint = "https://dummyjson.com/products";
+const endpoint = 'https://dummyjson.com/products';
 
-export async function fetchAllProducts(): Promise<
-  Product[] | { message: string }
-> {
+export async function fetchProducts(limit: number = 0): Promise<Product[] | { message: string }> {
   try {
-    const response = await fetch(`${endpoint}?limit=0`);
-    if (!response.ok) return { message: "Failed to fetch products." };
+    const response = await fetch(`${endpoint}?limit=${limit}`);
+    if (!response.ok) return { message: 'Failed to fetch products.' };
     const data = await response.json();
-    return data.results;
+    return data.products;
   } catch (error) {
     console.log(error);
     throw new Error(`Could not reach the API to fetch anything.`);
   }
 }
 
-export async function fetchProducts(
+export async function fetchProductsByCategory(
   category: Category
 ): Promise<ProductResponse[] | { message: string }> {
   try {
@@ -36,9 +28,7 @@ export async function fetchProducts(
   }
 }
 
-export async function fetchBySearch(
-  query: string
-): Promise<Product[] | { message: string }> {
+export async function fetchBySearch(query: string): Promise<Product[] | { message: string }> {
   try {
     const response = await fetch(`${endpoint}/search?q=${query}`);
     if (!response.ok) return { message: `Failed to fetch ${query}.` };
@@ -52,13 +42,12 @@ export async function fetchBySearch(
 
 export async function fetchFilteredProducts(query: string) {
   const objectsFromSearch = await fetchBySearch(query);
-  console.log("Svar från API:", objectsFromSearch);
 
   const allowedCategoriesSet = new Set(allowedCategories);
   if (
     objectsFromSearch &&
-    typeof objectsFromSearch === "object" &&
-    "message" in objectsFromSearch
+    typeof objectsFromSearch === 'object' &&
+    'message' in objectsFromSearch
   ) {
     return []; //Hantera om fel uppstår.
   }
@@ -66,6 +55,5 @@ export async function fetchFilteredProducts(query: string) {
   const chosenProducts = objectsFromSearch.filter((product) =>
     allowedCategoriesSet.has(product.category as Category)
   );
-  console.log("Här är den eller de sökta produkterna", chosenProducts);
   return chosenProducts;
 }
