@@ -38,9 +38,13 @@ body {
     [full-width-end];
 }
 
+.inherit {
+  grid-template-columns: inherit;
+}
+
 .content {
   grid-column: content-start / content-end;
-  display:grid;
+  display: grid;
 }
 
 .breakout {
@@ -51,7 +55,6 @@ body {
 .full-width {
   grid-column: full-width-start / full-width-end;
   display: grid;
-
 }
 
 * {
