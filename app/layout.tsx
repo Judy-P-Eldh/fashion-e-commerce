@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className='.content-grid'>
+      <body className='content-grid'>
         <Navigation/>
         {children}
         <Footer />

@@ -29,37 +29,33 @@ body {
 .content-grid {
   display: grid;
   /*   we can set more accurate sizes when we have a design to follow */
-  grid-template-columns: [full-width-start] 1fr, [breakout-start] 1fr, [content-start] 2fr,
-    [content-end] 2fr, [breakout-end] 1fr, [full-width-end] 1fr;
+  grid-template-columns:
+    [full-width-start] 1fr
+    [breakout-start] 1fr
+    [content-start] 1fr
+    [content-end] 1fr
+    [breakout-end] 1fr
+    [full-width-end];
 }
 
-.content-grid > :not(.breakout, .full-width),
-.full-width > :not(.breakout, .full-width) {
-  grid-column: content;
+.content {
+  grid-column: content-start / content-end;
+  display:grid;
 }
-.content-grid > .breakout {
-  grid-column: breakout;
+
+.breakout {
+  grid-column: breakout-start / breakout-end;
   display: grid;
 }
-.full-width > .breakout {
-  grid-column: breakout;
+
+.full-width {
+  grid-column: full-width-start / full-width-end;
   display: grid;
-}
-.content-grid > .full-width {
-  grid-column: full-width;
-  display: grid;
-  grid-template-columns: inherit;
-}
-.full-width > .full-width {
-  grid-column: full-width;
-  display: grid;
-  grid-template-columns: inherit;
+
 }
 
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
 a {
