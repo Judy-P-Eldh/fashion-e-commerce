@@ -13,7 +13,7 @@ export default function Footer() {
       <aside></aside>
 
       <nav className='grid grid-cols-4 gap-4'>
-        <Image src="/logo" alt="logo" width={300} height={300} />
+        <Image src="/mail.svg" alt="logo" width={300} height={300} />
         <section>
           <h3>About</h3>
           <ul>

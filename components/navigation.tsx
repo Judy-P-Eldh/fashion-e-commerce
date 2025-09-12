@@ -1,5 +1,6 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
+import Search from "./search";
 
 export default function Navigation() {
   return (
@@ -17,17 +18,17 @@ export default function Navigation() {
           </li>
         </ul>
         <picture className="flex items-center">
-          <Image src="" alt="" width={200} height={200} />
+          <Image src={'/mail.svg'} alt="" width={200} height={200} />
         </picture>
-        <div></div>
+        <div><Search /></div>
         <div className="flex gap-5">
           <Link href="#">
-            {' '}
-            <Image src="" width={200} height={200} alt="Profile" />
+            {" "}
+            <Image src={'/mail.svg'} width={200} height={200} alt="Profile" />
           </Link>
           <Link href="#">
-            {' '}
-            <Image src="" width={200} height={200} alt="Cart" />
+            {" "}
+            <Image src={'/mail.svg'} width={200} height={200} alt="Cart" />
           </Link>
         </div>
       </nav>
