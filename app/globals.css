@@ -68,3 +68,19 @@ a {
     color-scheme: dark;
   }
 }
+
+.darker-color-front {
+  color: #D6CCC2;
+}
+
+.darker-color-back {
+  background-color: #D6CCC2;
+}
+
+.lighter-color-front {
+  color: #F2EAE1;
+}
+
+.lighter-color-back {
+  background-color: #F2EAE1;
+}

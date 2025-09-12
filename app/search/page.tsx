@@ -1,3 +1,4 @@
+import ProductCard from "@/components/productcard";
 import { fetchFilteredProducts } from "@/lib/data/productdata";
 import { Product } from "@/lib/interfaces/product";
 
@@ -18,8 +19,7 @@ const products = await fetchFilteredProducts(query);
       {products.length > 0 ? (
         products.map((product: Product) => (
           <div key={product.id}>
-            <h3>{product.title}</h3>
-            <p>--- Category: {product.category}</p>
+            <ProductCard product={product} />
           </div>
         ))
       ) : (
