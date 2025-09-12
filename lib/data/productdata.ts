@@ -14,6 +14,20 @@ export async function fetchProducts(limit: number = 0): Promise<Product[] | { me
   }
 }
 
+export async function fetchProductsByCategory(
+  category: Category
+): Promise<ProductResponse[] | { message: string }> {
+  try {
+    const response = await fetch(`${endpoint}/category/${category}?limit=0`);
+    if (!response.ok) return { message: "Failed to fetch sunglasses." };
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.log(error);
+    throw new Error(`Could not reach the API to fetch ${category}.`);
+  }
+}
+
 export async function fetchBySearch(query: string): Promise<Product[] | { message: string }> {
   try {
     const response = await fetch(`${endpoint}/search?q=${query}`);
