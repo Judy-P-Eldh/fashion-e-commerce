@@ -1,13 +1,13 @@
-import type { Metadata } from 'next';
-import './globals.css';
-import Navigation from '@/components/navigation';
-import Footer from '@/components/footer';
+import type { Metadata } from "next";
+import "./globals.css";
+import Navigation from "@/components/navigation";
+import Footer from "@/components/footer";
 
 //uppdate when we have a company/brand name
 export const metadata: Metadata = {
-  title: '[Brand name] fashion e-commerce',
+  title: "[Brand name] fashion e-commerce",
   description:
-    'Buy clothes online at [Brand Name]. Affordable fashion, fast shipping, and a wide selection of styles for every occasion.',
+    "Buy clothes online at [Brand Name]. Affordable fashion, fast shipping, and a wide selection of styles for every occasion.",
 };
 
 export default function RootLayout({
@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Navigation/>
+        <Navigation />
         {children}
         <Footer />
       </body>
