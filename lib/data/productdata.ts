@@ -15,7 +15,6 @@ export async function fetchAllProducts(): Promise<
     const response = await fetch(`${endpoint}?limit=0`);
     if (!response.ok) return { message: "Failed to fetch products." };
     const data = await response.json();
-    // console.log(data);
     return data.results;
   } catch (error) {
     console.log(error);
@@ -27,11 +26,9 @@ export async function fetchProducts(
   category: Category
 ): Promise<ProductResponse[] | { message: string }> {
   try {
-    // console.log("Fetching category:", category);
     const response = await fetch(`${endpoint}/category/${category}?limit=0`);
     if (!response.ok) return { message: "Failed to fetch sunglasses." };
     const data = await response.json();
-    // console.log(data);
     return data;
   } catch (error) {
     console.log(error);
@@ -46,7 +43,6 @@ export async function fetchBySearch(
     const response = await fetch(`${endpoint}/search?q=${query}`);
     if (!response.ok) return { message: `Failed to fetch ${query}.` };
     const data = await response.json();
-    // console.log(data);
     return data.products ?? [];
   } catch (error) {
     console.log(error);
