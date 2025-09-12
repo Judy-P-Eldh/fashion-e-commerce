@@ -1,10 +1,12 @@
 import SearchButton from './searchbutton';
-
-export default function Search({ query }: { query?: string }) {
+import Form from 'next/form';
+ 
+export default function Search({ query, btn = true }: { query?: string; btn?: boolean }) {
   return (
-    <form action="/search">
-      <input type="text" defaultValue={query} name="query" />
-       <SearchButton />
-    </form>
+    <Form action="/search">
+      <input type="text" defaultValue={query} name="query" className="bg-white border-1" />
+      {btn &&  <SearchButton />}
+    </Form>
   );
 }
+ 
