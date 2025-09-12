@@ -11,9 +11,6 @@ export default async function SearchPage({
 
 const products = await fetchFilteredProducts(query);
 
-
-
- 
   return (
     <div>
       {products.length > 0 ? (

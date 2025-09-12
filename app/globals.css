@@ -3,12 +3,16 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --darker: #D6CCC2;
+  --brighter: #F2EAE1;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --darker: #D6CCC2;
+    --brighter: #F2EAE1;
   }
 }
 
@@ -30,17 +34,12 @@ body {
   display: grid;
   /*   we can set more accurate sizes when we have a design to follow */
   grid-template-columns:
-    [full-width-start] 1fr
-    [breakout-start] 1fr
-    [content-start] 1fr
-    [content-end] 1fr
-    [breakout-end] 1fr
-    [full-width-end];
+    [full-width-start] 1fr [breakout-start] 1fr [content-start] 1fr [content-end] 1fr [breakout-end] 1fr [full-width-end];
 }
 
 .content {
   grid-column: content-start / content-end;
-  display:grid;
+  display: grid;
 }
 
 .breakout {
@@ -69,18 +68,12 @@ a {
   }
 }
 
-.darker-color-front {
-  color: #D6CCC2;
-}
-
-.darker-color-back {
-  background-color: #D6CCC2;
-}
-
-.lighter-color-front {
-  color: #F2EAE1;
-}
-
-.lighter-color-back {
-  background-color: #F2EAE1;
+#product-card {
+  display: grid;
+  justify-content: center;
+  border: 0.1rem solid;
+  border-color: var(--brighter);
+  background-color: var(--darker);
+  color: black;
+  text-align: center;
 }
