@@ -1,10 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import Search from './search';
 
 export default function Navigation() {
   return (
-    <header className="content-grid">
-      <nav>
+    <header className="bg-green-200 h-60 grid text-black full-width grid-cols-3">
+      <nav className="grid">
         <ul className="flex justify-between items-center p-4">
           <li>
             <Link href="#">Home</Link>
@@ -16,19 +17,23 @@ export default function Navigation() {
             <Link href="#">SALE</Link>
           </li>
         </ul>
-        <picture className="flex items-center">
-          <Image src="" alt="" width={200} height={200} />
-        </picture>
-        <div></div>
-        <div className="flex gap-5">
-          <Link href="#">
-            <Image src="" width={200} height={200} alt="Profile" />
-          </Link>
-          <Link href="#">
-            <Image src="" width={200} height={200} alt="Cart" />
-          </Link>
-        </div>
       </nav>
+      <div className='flex justify-center'>
+        <picture className="flex items-center">
+          <Image src="/mail.svg" alt="" width={200} height={200} />
+        </picture>
+      </div>
+      <aside className="flex gap-5 items-center">
+        <Search btn={false} />
+        <Link href="#">
+          {' '}
+          <Image src="/mail.svg" width={200} height={200} alt="Profile" />
+        </Link>
+        <Link href="#">
+          {' '}
+          <Image src="/mail.svg" width={200} height={200} alt="Cart" />
+        </Link>
+      </aside>
     </header>
   );
 }
