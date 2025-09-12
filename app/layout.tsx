@@ -17,8 +17,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="w-full">
-        <Navigation />
+      <body>
+        <Navigation/>
         {children}
         <Footer />
       </body>

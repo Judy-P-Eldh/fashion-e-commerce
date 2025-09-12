@@ -10,17 +10,18 @@ export default async function Home() {
 
   return (
     <main className="content-grid">
-      <section className="full-width bg-[#D6CCC2]">
-        <h2>Sign up for our newsletter</h2>
-        <Form action="submit">
+      <section className="full-width inherit grid bg-[#D6CCC2] py-10">
+        <Form className="breakout" action="submit">
+        <h2 className='text-2xl mb-5'>Sign up for our newsletter and get 10% off your first order</h2>
           <label htmlFor="email" className="sr-only">
             Email
           </label>
-          <input type="text" />
+          <input type="text" className='bg-white' />
+          <button>Sign me up</button>
         </Form>
       </section>
-      <section className="breakout inherit">
-        <h2>Best sellers</h2>
+      <section className="breakout inherit py-10">
+        <h2 className='content text-center text-4xl'>Browse our best sellers</h2>
         <ul className="col-span-full flex justify-between">
           {firstForProducts?.map((p: Product) => {
             return (
