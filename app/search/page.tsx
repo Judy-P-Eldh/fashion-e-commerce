@@ -7,10 +7,8 @@ export default async function SearchPage({
   searchParams: Promise<{ query: string }>;
 }) {
   const {query} = await searchParams;
-  console.log("Sökparametrar:", query);
 
 const products = await fetchFilteredProducts(query);
-console.log("Produkter från filtrerad sökning:", products);
 
 
 
