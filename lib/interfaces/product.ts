@@ -27,3 +27,16 @@ export interface ProductResponse {
 }
 
 export type Category = "womens-dresses" | "womens-shoes" | "womens-watches" | "womens-bags" | "womens-jewellery"| "mens-shirts" | "mens-shoes" | "mens-watches" | "tops" | "sunglasses";
+
+export const allowedCategories: Category[] = [
+    "womens-dresses",
+    "womens-shoes",
+    "womens-watches",
+    "womens-bags",
+    "womens-jewellery",
+    "mens-shirts",
+    "mens-shoes",
+    "mens-watches",
+    "tops",
+    "sunglasses",
+  ];
