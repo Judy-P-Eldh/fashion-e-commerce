@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #ffffff;
@@ -26,10 +26,36 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.content-grid {
+  display: grid;
+  /*   we can set more accurate sizes when we have a design to follow */
+  grid-template-columns:
+    [full-width-start] 1fr
+    [breakout-start] 1fr
+    [content-start] 1fr
+    [content-end] 1fr
+    [breakout-end] 1fr
+    [full-width-end];
+}
+
+.content {
+  grid-column: content-start / content-end;
+  display:grid;
+}
+
+.breakout {
+  grid-column: breakout-start / breakout-end;
+  display: grid;
+}
+
+.full-width {
+  grid-column: full-width-start / full-width-end;
+  display: grid;
+
+}
+
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
 a {

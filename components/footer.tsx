@@ -9,35 +9,34 @@ export default function Footer() {
   ];
 
   return (
-    <footer>
-      <aside></aside>
-
-      <nav className='grid grid-cols-4 gap-4'>
+    <footer className="full-width bg-white py-10 text-black grid grid-cols-4">
+      <aside>
+        {' '}
         <Image src="/logo" alt="logo" width={300} height={300} />
-        <section>
-          <h3>About</h3>
-          <ul>
-            <Link href=""></Link>
-          </ul>
-        </section>
-        <section>
-          <h3>Get help</h3>
-          <ul>
-            <Link href=""></Link>
-          </ul>
-        </section>
-        <section>
-          <h3 className='text-center'>Socials</h3>
-          <ul>
-            {socials.map((item) => {
-              return (
-                <Link href={item.href} key={item.name}>
-                  <Image src={item.src} alt={item.name} width={300} height={300} className='h-15'/>
-                </Link>
-              );
-            })}
-          </ul>
-        </section>
+      </aside>
+      <nav area-label="About" className="flex justify-center">
+        <h3>About</h3>
+        <ul>
+          <Link href=""></Link>
+        </ul>
+      </nav>
+      <nav area-label="Get Help" className="flex justify-center">
+        <h3>Get help</h3>
+        <ul>
+          <Link href=""></Link>
+        </ul>
+      </nav>
+      <nav area-label="Social media">
+        <h3 className="text-center mb-8">Socials</h3>
+        <ul className='flex flex-col items-center'>
+          {socials.map((item) => {
+            return (
+              <Link href={item.href} key={item.name}>
+                <Image src={item.src} alt={item.name} width={300} height={300} className="h-15" />
+              </Link>
+            );
+          })}
+        </ul>
       </nav>
     </footer>
   );
