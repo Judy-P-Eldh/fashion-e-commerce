@@ -15,9 +15,9 @@ const products = await fetchFilteredProducts(query);
     <div>
       {products.length > 0 ? (
         products.map((product: Product) => (
-          <div key={product.id}>
-            <ProductCard product={product} />
-          </div>
+          <ul id="card-ul"  key={product.id}>
+            <li><ProductCard product={product} /></li>
+          </ul>
         ))
       ) : (
         <p>Inga produkter hittades för valda kategorier.</p>
