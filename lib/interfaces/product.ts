@@ -26,19 +26,6 @@ export interface ProductResponse {
   total: number;
 }
 
-export const categories = [
-  'womens-dresses',
-  'womens-shoes',
-  'womens-watches',
-  'womens-bags',
-  'womens-jewellery',
-  'mens-shirts',
-  'mens-shoes',
-  'mens-watches',
-  'tops',
-  'sunglasses',
-] as const;
-
 export const maleCategories = ['tops', 'mens-shirts', 'mens-shoes', 'mens-watches'] as const;
 export const womenCategories = [
   'womens-dresses',
@@ -57,5 +44,10 @@ export const accessoryCategories = [
 
 export const allowedCategories = [...new Set([...maleCategories,...womenCategories, ...accessoryCategories])] as const; 
 
-export type AllowedCategory = typeof allowedCategories[number];
+export const collections = {
+  male: maleCategories,
+  female: womenCategories,
+  accessories: accessoryCategories,
+} as const;
+
 

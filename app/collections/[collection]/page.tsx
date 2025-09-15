@@ -1,7 +1,7 @@
-import { categories } from '@/lib/interfaces/product';
+import { collections } from '@/lib/interfaces/product';
 import Link from "next/link"
-export default async function Page({ params }: { params: { collection: string } }) {
-  let { collection } = await params;
+export default async function Page({ params }: { params: { selectedCollection:  } }) {
+  let { selectedCollection } = await params;
   
 
   return (

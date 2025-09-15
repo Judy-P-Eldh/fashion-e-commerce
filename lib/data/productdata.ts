@@ -1,6 +1,5 @@
 import {
   allowedCategories,
-  Category,
   Product,
   ProductResponse,
 } from "../interfaces/product";
