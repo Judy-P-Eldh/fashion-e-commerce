@@ -58,3 +58,18 @@ a {
   text-decoration: none;
 }
 
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+#product-card {
+  display: grid;
+  justify-content: center;
+  border: 0.1rem solid;
+  border-color: var(--brighter);
+  background-color: var(--darker);
+  color: black;
+  text-align: center;
+}
