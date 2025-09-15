@@ -20,7 +20,7 @@ export default async function SearchPage({
           {products.length > 0 ? (
             products.map((product: Product) => (
               <li key={product.id}>
-                <Link id="product-card" href={`/product/${product.id}`}>
+                <Link id="product-card" href={`/products/${product.id}`}>
                   <ProductCard product={product} />
                 </Link>
               </li>
