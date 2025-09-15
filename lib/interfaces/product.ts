@@ -39,15 +39,23 @@ export const categories = [
   'sunglasses',
 ] as const;
 
-
-// create category type that is union of these two
-export const maleCategories = ['tops', 'mens-shirts', 'mens-shoes', 'mens-watches'];
+export const maleCategories = ['tops', 'mens-shirts', 'mens-shoes', 'mens-watches'] as const;
 export const womenCategories = [
   'womens-dresses',
   'womens-shoes',
   'womens-watches',
   'womens-bags',
   'womens-jewellery',
-];
+] as const;
+export const accessoryCategories = [
+  'sunglasses',
+  'mens-watches',
+  'womens-watches',
+  'womens-bags',
+  'womens-jewellery',
+] as const;
 
-export type Category = (typeof categories)[number];
+export const allowedCategories = [...new Set([...maleCategories,...womenCategories, ...accessoryCategories])] as const; 
+
+export type AllowedCategory = typeof allowedCategories[number];
+
