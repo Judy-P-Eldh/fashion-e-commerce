@@ -27,7 +27,7 @@ export default function Footer() {
         <nav area-label="Get Help" className="flex justify-center">
           <h3>Get help</h3>
           <ul>
-            <Link href=""></Link>
+            <Link href="/contact">Contact</Link>
           </ul>
         </nav>
         <nav area-label="Social media">
