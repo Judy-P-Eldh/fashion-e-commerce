@@ -11,7 +11,7 @@ export default function Navigation() {
             <Link href="#">Home</Link>
           </li>
           <li>
-            <Link href="#">Collections</Link>
+            <Link href="/collections/women">Collections</Link>
           </li>
           <li>
             <Link href="#">SALE</Link>
