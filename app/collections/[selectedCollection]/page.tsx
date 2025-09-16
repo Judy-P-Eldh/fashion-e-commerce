@@ -16,7 +16,7 @@ export default async function Page({
             <Link key={collection} href={`${collection}`}>
               <h2
                 className={
-                  collection == selectedCollection ? "underline" : ""
+                  collection === selectedCollection ? "underline" : ""
                 }
               >
                 {collection}
