@@ -1,4 +1,4 @@
-export const maleCategories = ['tops', 'mens-shirts', 'mens-shoes', 'mens-watches'] as const;
+export const menCategories = ['tops', 'mens-shirts', 'mens-shoes', 'mens-watches'] as const;
 export const womenCategories = [
   'womens-dresses',
   'womens-shoes',
@@ -14,10 +14,10 @@ export const accessoryCategories = [
   'womens-jewellery',
 ] as const;
 
-export const allowedCategories = [...new Set([...maleCategories,...womenCategories, ...accessoryCategories])] as const; 
+export const allowedCategoriesSet = new Set([...menCategories,...womenCategories, ...accessoryCategories]); 
 
 export const collections = {
-  male: maleCategories,
-  female: womenCategories,
+  men: menCategories,
+  women: womenCategories,
   accessories: accessoryCategories,
 } as const;

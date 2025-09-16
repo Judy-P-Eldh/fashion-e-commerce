@@ -34,3 +34,4 @@ export type CollectionKey = keyof typeof collections;
 export type MaleCategory = typeof maleCategories[number];
 export type WomenCategory = typeof womenCategories[number];
 export type AccessoryCategory = typeof accessoryCategories[number];
+export type AllowedCategory = typeof collections[CollectionKey][number]
