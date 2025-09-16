@@ -1,4 +1,4 @@
-import { accessoryCategories, collections, maleCategories, womenCategories } from "../data/variables";
+import { accessoryCategories, collections, menCategories, womenCategories } from "../data/variables";
 
 export interface Product {
   id: number;
@@ -31,7 +31,5 @@ export interface ProductResponse {
 
 
 export type CollectionKey = keyof typeof collections;
-export type MaleCategory = typeof maleCategories[number];
-export type WomenCategory = typeof womenCategories[number];
 export type AccessoryCategory = typeof accessoryCategories[number];
 export type AllowedCategory = typeof collections[CollectionKey][number]
