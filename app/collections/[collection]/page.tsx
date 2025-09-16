@@ -1,6 +1,6 @@
-import { collections } from '@/lib/interfaces/product';
+import { CollectionKey, collections } from '@/lib/interfaces/product';
 import Link from "next/link"
-export default async function Page({ params }: { params: { selectedCollection:  } }) {
+export default async function Page({ params }: { params: { selectedCollection: CollectionKey } }) {
   let { selectedCollection } = await params;
   
 
