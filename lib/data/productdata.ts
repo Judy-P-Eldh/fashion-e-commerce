@@ -1,9 +1,8 @@
 import {
-  Category,
+  AllowedCategory,
   Product,
   ProductResponse,
 } from "../interfaces/product";
-
 const endpoint = "https://dummyjson.com/products";
 
 export async function fetchProducts(
@@ -33,7 +32,7 @@ export async function fetchProductById(id: number): Promise<Product> {
 }
 
 export async function fetchProductsByCategory(
-  category: Category
+  category: AllowedCategory
 ): Promise<ProductResponse[] | { message: string }> {
   try {
     const response = await fetch(`${endpoint}/category/${category}?limit=0`);
@@ -63,8 +62,7 @@ export async function fetchBySearch(
 // export async function fetchFilteredProducts(query: string) {
 //   const objectsFromSearch = await fetchBySearch(query);
 
-//   const allowedCategoriesSet = new Set(allowedCategories);
-//   if (
+// //   if (
 //     objectsFromSearch &&
 //     typeof objectsFromSearch === "object" &&
 //     "message" in objectsFromSearch
