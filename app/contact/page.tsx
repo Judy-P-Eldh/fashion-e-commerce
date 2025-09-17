@@ -51,7 +51,7 @@ export default function ContactPage() {
             className="w-full resize-none border "
           ></textarea>
 
-          <button type="submit" className="border">
+          <button type="submit" className="border cursor-pointer">
             Send
           </button>
         </form>
