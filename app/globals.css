@@ -1,9 +1,8 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 :root {
-  --background: #F2EAE1;
+  --background: #f2eae1;
   --foreground: #171717;
-  
 }
 
 html,
@@ -22,18 +21,29 @@ body {
 
 .content-grid {
   display: grid;
-  /*   we can set more accurate sizes when we have a design to follow */
+  --spacing-md: 1rem;
+
+  --content-max-width: 90rem;
+  --breakout-max-width: 95rem;
+  --padding-inline: var(--spacing-md);
+  --breakout-size: calc(
+    (var(--breakout-max-width) - var(--content-max-width)) / 2
+  );
+
   grid-template-columns:
-    [full-width-start] 5rem
-    [breakout-start] 1fr
-    [content-start] 1fr
-    [content-end] 1fr
-    [breakout-end] 5rem
+    [full-width-start] minmax(var(--padding-inline), 1fr)
+    [breakout-start] minmax(0, var(--breakout-size))
+    [content-start] min(
+      100% - (var(--padding-inline) * 2),
+      var(--content-max-width)
+    )
+    [content-end] minmax(0, var(--breakout-size))
+    [breakout-end] minmax(var(--padding-inline), 1fr)
     [full-width-end];
 }
 
 .inherit {
-  display:grid;
+  display: grid;
   grid-template-columns: inherit;
 }
 
