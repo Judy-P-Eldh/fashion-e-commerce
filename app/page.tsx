@@ -20,7 +20,7 @@ export default async function Home() {
           <button>Sign me up</button>
         </Form>
       </section>
-      <section className="breakout inherit py-10">
+      <section className="content py-10">
         <h2 className='content text-center text-4xl'>Browse our best sellers</h2>
         <ul className="col-span-full flex justify-between">
           {firstForProducts?.map((p: Product) => {
