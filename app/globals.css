@@ -3,6 +3,9 @@
 :root {
   --background: #f2eae1;
   --foreground: #171717;
+  --brighter: #85837d;
+   --darker: #a79c91;
+  
 }
 
 html,
@@ -77,8 +80,6 @@ a {
 #product-card {
   display: grid;
   justify-content: center;
-  border: 0.1rem solid;
-  border-color: var(--brighter);
   background-color: var(--darker);
   color: black;
   text-align: center;
