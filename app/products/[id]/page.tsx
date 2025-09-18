@@ -2,6 +2,7 @@ import { Product } from "@/lib/interfaces/product";
 import { fetchProductById } from "@/lib/data/productdata";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import BuyButton from "@/components/buybutton";
 
 export default async function Page({
   params,
@@ -25,6 +26,7 @@ export default async function Page({
         <p>${product.price}</p>
         <p>{product.description}</p>
       </article>
+      <BuyButton productName={product.title} />
     </main>
   );
 }
