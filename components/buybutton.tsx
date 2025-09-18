@@ -1,10 +1,10 @@
 "use client";
-import { inShoppingCart } from "@/lib/interfaces/product";
-import { ShoppingBasketIcon } from "lucide-react";
+import { inShoppingCart } from "@/lib/data/variables";
+import { ShoppingBagIcon } from "lucide-react";
 export default function BuyButton({productName}:{productName: string}) {
   function handleClick() {
     inShoppingCart.push(productName);
-    alert(`${productName} added to shoppin cart.`);
+    alert(`${productName} added to shopping cart.`);
   }
   return (
     <button
@@ -12,7 +12,7 @@ export default function BuyButton({productName}:{productName: string}) {
       
       className=" flex gap-2 text-sm border-1 p-2 my-2 rounded-sm hover:bg-stone-400"
     >
-      <ShoppingBasketIcon size={20}/>
+      <ShoppingBagIcon size={20}/>
       Add to cart
     </button>
   );

@@ -33,5 +33,3 @@ export interface ProductResponse {
 export type CollectionKey = keyof typeof collections;
 export type AccessoryCategory = typeof accessoryCategories[number];
 export type AllowedCategory = typeof collections[CollectionKey][number]
-
-export const inShoppingCart: string[] = [];

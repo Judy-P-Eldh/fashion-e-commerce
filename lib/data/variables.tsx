@@ -25,3 +25,5 @@ export const collections = {
   men: menCategories,
   accessories: accessoryCategories,
 } as const;
+
+export const inShoppingCart: string[] = [];
