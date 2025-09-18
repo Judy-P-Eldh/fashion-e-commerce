@@ -9,7 +9,7 @@ export default function Navigation() {
         <nav className="grid">
           <ul className="flex justify-between items-center p-4">
             <li>
-              <Link href="#">Home</Link>
+              <Link href="/">Home</Link>
             </li>
             <li>
               <Link href="/collections/women">Collections</Link>
