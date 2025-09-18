@@ -1,17 +1,18 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Search from './search';
+import { User, ShoppingBag } from 'lucide-react';
 
 export default function Navigation() {
   return (
     <header className="h-60 text-black content-grid ">
       <div className="breakout grid-cols-3 grid">
         <nav className="grid">
-          <ul className="flex justify-between items-center p-4">
-            <li>
+          <ul className="flex items-center">
+            <li className='mr-8'>
               <Link href="/">Home</Link>
             </li>
-            <li>
+            <li className='mr-8'>
               <Link href="/collections/women">Collections</Link>
             </li>
             <li>
@@ -21,18 +22,18 @@ export default function Navigation() {
         </nav>
         <div className="flex justify-center">
           <picture className="flex items-center">
-            <Image src="/mail.svg" alt="" width={200} height={200} />
+            <User></User>
           </picture>
         </div>
-        <aside className="flex gap-5 items-center">
+        <aside className="flex gap-5 items-center justify-end">
           <Search btn={false} />
           <Link href="#">
             {' '}
-            <Image src="/mail.svg" width={200} height={200} alt="Profile" />
+               <User></User>
           </Link>
           <Link href="#">
             {' '}
-            <Image src="/mail.svg" width={200} height={200} alt="Cart" />
+           <ShoppingBag></ShoppingBag>
           </Link>
         </aside>
       </div>
