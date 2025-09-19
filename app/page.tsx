@@ -14,9 +14,7 @@ export default async function Home() {
     <main className="content-grid">
       <section className="full-width inherit grid bg-[#D6CCC2] py-10">
         <Form className="breakout" action="submit">
-          <h2 className="text-2xl mb-5">
-            Sign up for our newsletter and get 10% off your first order
-          </h2>
+        <h2 className='text-2xl mb-5 font-courier-prime'>Sign up for our newsletter and get 10% off your first order</h2>
           <label htmlFor="email" className="sr-only">
             Email
           </label>
