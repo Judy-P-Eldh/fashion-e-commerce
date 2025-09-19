@@ -6,7 +6,13 @@ export default function ProductCard({ product }: { product: Product }) {
   return (
     <>
       <h2>{product.title}</h2>
-      <Image className="order-first" src={image} alt={product.title} width={400} height={400} />
+      <Image
+        className="order-first"
+        src={image}
+        alt={product.title}
+        width={400}
+        height={400}
+      />
       <p>$ {product.price}</p>
     </>
   );
