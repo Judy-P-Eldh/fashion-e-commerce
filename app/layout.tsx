@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navigation from "@/components/navigation";
+import Navigation from "@/components/navigation/navigation";
 import Footer from "@/components/footer";
 import{ Italiana, Courier_Prime }  from 'next/font/google'
 

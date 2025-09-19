@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Search from './search';
+import Search from '../search';
 import { User, ShoppingBag, Menu } from 'lucide-react';
 import NavigationLinks from './navigation-links';
 
