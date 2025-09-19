@@ -22,8 +22,8 @@ export default async function SearchPage({
 
   return (
     <main>
-      <section>
-        <div className="flex gap-4 justify-center">
+      <section className="content-grid">
+        <div className="content flex gap-4 justify-center">
           <Link
             className="p-2 border-2 rounded-sm m-2"
             href={`/search?query=${query}&page=${pageNum - 1}`}
