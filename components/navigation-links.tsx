@@ -11,7 +11,7 @@ export default function NavigationLinks() {
     { name: 'SALE', href: '/sale' },
   ];
   const isActive = (href: string) => {
-    console.log(pathname, href, mounted);
+    if (!mounted) return false; 
 
     return pathname === href || pathname.startsWith(href + '/');
   };

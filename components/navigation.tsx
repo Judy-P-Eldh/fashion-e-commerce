@@ -1,26 +1,39 @@
 import Link from 'next/link';
 import Search from './search';
-import { User, ShoppingBag } from 'lucide-react';
+import { User, ShoppingBag, Menu } from 'lucide-react';
 import NavigationLinks from './navigation-links';
 
 export default function Navigation() {
   return (
-    <header className="h-45 text-black content-grid ">
+    <header className="h-30 lg:h-45 text-black content-grid">
       <div className="breakout grid-cols-3 grid">
-        <NavigationLinks />
-        <div className="flex justify-center items-center">
-          <h1 className="text-9xl">LOGO</h1>
+        <div className="hidden lg:flex">
+          <NavigationLinks />
         </div>
-        <aside className="flex gap-5 items-center justify-end">
-          <Search btn={false} />
-          <Link href="#">
-            {' '}
-            <User strokeWidth={1.5} size={35}></User>
-          </Link>
-          <Link href="#">
-            {' '}
-            <ShoppingBag strokeWidth={1.5} size={35}></ShoppingBag>
-          </Link>
+        <button className="lg:hidden">
+          <Menu strokeWidth={1.5} size={35} className="h-7" />
+        </button>
+
+        <div className="flex justify-center items-center">
+          <h1 className="text-6xl lg:text-9xl">LOGO</h1>
+        </div>
+        <aside
+          className="contents
+           lg:flex justify-start lg:flex-row-reverse items-center lg:gap-6"
+        >
+          <div className="flex items-center gap-2 lg:gap-6 justify-end">
+            <Link href="#">
+              {' '}
+              <User strokeWidth={1.5} size={35} className="h-7 lg:h-full"></User>
+            </Link>
+            <Link href="#">
+              {' '}
+              <ShoppingBag strokeWidth={1.5} size={35} className="h-7 lg:h-full"></ShoppingBag>
+            </Link>
+          </div>
+          <div className="col-span-3 flex justify-center">
+            <Search btn={false} />
+          </div>
         </aside>
       </div>
     </header>
