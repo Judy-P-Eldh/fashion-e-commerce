@@ -1,6 +1,5 @@
 import ProductCard from "@/components/productcard";
 import { Product } from "@/lib/interfaces/product";
-import Link from "next/link";
 
 export default function ProductList({ products }: { products: Product[] }) {
   return (
