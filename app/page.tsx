@@ -25,7 +25,7 @@ export default async function Home() {
         </Form>
       </section>
 
-      <section className="breakout pt-10">
+      <section className="content pt-10">
         <h2 className="content text-center text-4xl">
           Browse our best sellers
         </h2>
@@ -36,7 +36,7 @@ export default async function Home() {
         )}
       </section>
 
-      <section className="breakout pt-10">
+      <section className="content pt-10">
         <h2 className="content text-center text-4xl">News</h2>
         {productsArray.length > 0 ? (
           <ProductList products={productsArray.slice(10, 18)} />
