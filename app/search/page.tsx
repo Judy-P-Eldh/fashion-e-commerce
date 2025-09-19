@@ -1,3 +1,4 @@
+import BuyButton from "@/components/buybutton";
 import ProductCard from "@/components/productcard";
 import { fetchBySearch } from "@/lib/data/productdata";
 import { Product } from "@/lib/interfaces/product";
@@ -43,9 +44,10 @@ export default async function SearchPage({
           {products.length > 0 ? (
             products.map((product: Product) => (
               <li className="" key={product.id}>
-                <Link id="product-card" href={`/products/${product.id}`}>
+                <Link className="pb-8" id="product-card" href={`/products/${product.id}`}>
                   <ProductCard product={product} />
                 </Link>
+               <BuyButton productName={product.title} />
               </li>
             ))
           ) : (

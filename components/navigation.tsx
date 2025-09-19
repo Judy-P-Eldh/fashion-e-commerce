@@ -1,6 +1,8 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import Search from './search';
+import Image from "next/image";
+import Link from "next/link";
+import Search from "./search";
+import { UserCircle } from "lucide-react";
+import ShoppingComponent from "./shoppingcomponent";
 
 export default function Navigation() {
   return (
@@ -18,7 +20,7 @@ export default function Navigation() {
           </li>
         </ul>
       </nav>
-      <div className='flex justify-center'>
+      <div className="flex justify-center">
         <picture className="flex items-center">
           <Image src="/mail.svg" alt="" width={200} height={200} />
         </picture>
@@ -26,12 +28,13 @@ export default function Navigation() {
       <aside className="flex gap-5 items-center">
         <Search btn={false} />
         <Link href="#">
-          {' '}
-          <Image src="/mail.svg" width={200} height={200} alt="Profile" />
+          <p className="sr-only">User profile</p>
+          <UserCircle size={34} strokeWidth={1} />
         </Link>
-        <Link href="#">
-          {' '}
-          <Image src="/mail.svg" width={200} height={200} alt="Cart" />
+        <Link className="flex gap-2" href="#">
+          <div>
+            <ShoppingComponent />
+          </div>
         </Link>
       </aside>
     </header>
