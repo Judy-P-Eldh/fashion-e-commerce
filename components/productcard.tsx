@@ -12,7 +12,7 @@ export default function ProductCard({ product }: { product: Product }) {
         <div className="grid text-center">
           <h2 className="text-2xl">{product.title}</h2>
           <Image
-            className="order-first"
+            className="order-first m-auto"
             src={image}
             alt={product.title}
             width={400}

@@ -9,7 +9,7 @@ export default function BuyButton({ productName }: { productName: string }) {
   return (
     <button
       onClick={handleClick}
-      className="flex justify-center gap-2 text-sm border p-2 m-auto rounded-sm hover:bg-stone-400"
+      className="flex justify-center gap-3 text-sm border p-2 m-auto rounded-sm hover:bg-stone-400"
     >
       <ShoppingBagIcon size={20} />
       Add to cart
