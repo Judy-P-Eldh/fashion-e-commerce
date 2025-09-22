@@ -1,11 +1,5 @@
 import { fetchProducts } from "@/lib/data/productdata";
-import {
-  DeleteIcon,
-  PlusIcon,
-  Trash,
-  Trash2Icon,
-  TrashIcon,
-} from "lucide-react";
+import { PlusIcon, Trash2Icon} from "lucide-react";
 
 export default async function AdminPage() {
   const products = await fetchProducts();
