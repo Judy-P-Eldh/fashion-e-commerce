@@ -10,7 +10,7 @@ export default function BuyButton({productName}:{productName: string}) {
     <button
       onClick={handleClick}
       
-      className=" flex gap-2 text-sm border-1 p-2 my-2 rounded-sm hover:bg-stone-400"
+      className="flex gap-2 text-sm border-1 p-2 my-2 rounded-sm hover:bg-stone-400"
     >
       <ShoppingBagIcon size={20}/>
       Add to cart
