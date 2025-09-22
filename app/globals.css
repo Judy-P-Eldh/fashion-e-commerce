@@ -4,8 +4,8 @@
   --background: #f2eae1;
   --foreground: #171717;
   --brighter: #85837d;
-   --darker: #a79c91;
-  
+  --darker: #a79c91;
+
 }
 
 html,
@@ -21,12 +21,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 h1,
 h2,
 h3,
 h4 {
   font-family: var(--font-italiana);
 }
+
 .content-grid {
   display: grid;
   --spacing-md: 1rem;
@@ -34,20 +36,11 @@ h4 {
   --content-max-width: 90rem;
   --breakout-max-width: 95rem;
   --padding-inline: var(--spacing-md);
-  --breakout-size: calc(
-    (var(--breakout-max-width) - var(--content-max-width)) / 2
-  );
+  --breakout-size: calc((var(--breakout-max-width) - var(--content-max-width)) / 2);
 
   grid-template-columns:
-    [full-width-start] minmax(var(--padding-inline), 1fr)
-    [breakout-start] minmax(0, var(--breakout-size))
-    [content-start] min(
-      100% - (var(--padding-inline) * 2),
-      var(--content-max-width)
-    )
-    [content-end] minmax(0, var(--breakout-size))
-    [breakout-end] minmax(var(--padding-inline), 1fr)
-    [full-width-end];
+    [full-width-start] minmax(var(--padding-inline), 1fr) [breakout-start] minmax(0, var(--breakout-size)) [content-start] min(100% - (var(--padding-inline) * 2),
+      var(--content-max-width)) [content-end] minmax(0, var(--breakout-size)) [breakout-end] minmax(var(--padding-inline), 1fr) [full-width-end];
 }
 
 .inherit {
@@ -87,4 +80,8 @@ a {
   background-color: var(--darker);
   color: black;
   text-align: center;
+}
+
+.admin-table {
+  border-bottom: solid 0.02rem var(--darker);
 }
