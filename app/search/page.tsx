@@ -23,6 +23,15 @@ export default async function SearchPage({
   return (
     <main>
       <section className="content-grid">
+        <div className="content pt-10">
+          <h2 className="text-center text-4xl">Search results for "{query}"</h2>
+          {products.length > 0 ? (
+            <ProductList products={products} />
+          ) : (
+            <p>No products found.</p>
+          )}
+        </div>
+
         <div className="content flex gap-4 justify-center">
           <Link
             className="p-2 border-2 rounded-sm m-2"
@@ -36,15 +45,6 @@ export default async function SearchPage({
           >
             Next
           </Link>
-        </div>
-
-        <div className="content pt-10">
-          <h2 className="text-center text-4xl">Search results for "{query}"</h2>
-          {products.length > 0 ? (
-            <ProductList products={products} />
-          ) : (
-            <p>No products found.</p>
-          )}
         </div>
       </section>
     </main>
