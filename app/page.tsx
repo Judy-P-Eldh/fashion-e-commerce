@@ -1,9 +1,11 @@
 import { fetchProducts } from "@/lib/data/productdata";
+import DeleteButton from "@/components/deleteButton";
 import Form from "next/form";
 import ProductList from "@/components/productlist";
 
 export default async function Home() {
   const products = await fetchProducts(20);
+
   const productsArray = Array.isArray(products) ? products : [];
   const errorMessage =
     typeof products === "object" && "message" in products
@@ -12,6 +14,7 @@ export default async function Home() {
 
   return (
     <main className="content-grid">
+      <DeleteButton />
       <section className="full-width inherit grid bg-[#D6CCC2] py-10">
         <Form className="breakout" action="submit">
           <h2 className="text-2xl mb-5 font-courier-prime">

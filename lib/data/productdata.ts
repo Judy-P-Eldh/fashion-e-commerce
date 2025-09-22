@@ -1,16 +1,10 @@
-import {
-  AllowedCategory,
-  Product,
-  ProductResponse,
-} from "../interfaces/product";
-const endpoint = "https://dummyjson.com/products";
+import { AllowedCategory, Product, ProductResponse } from '../interfaces/product';
+const endpoint = 'https://dummyjson.com/products';
 
-export async function fetchProducts(
-  limit: number = 0
-): Promise<Product[] | { message: string }> {
+export async function fetchProducts(limit: number = 0): Promise<Product[] | { message: string }> {
   try {
     const response = await fetch(`${endpoint}?limit=${limit}`);
-    if (!response.ok) return { message: "Failed to fetch products." };
+    if (!response.ok) return { message: 'Failed to fetch products.' };
     const data = await response.json();
     return data.products;
   } catch (error) {
@@ -36,7 +30,7 @@ export async function fetchProductsByCategory(
 ): Promise<ProductResponse[] | { message: string }> {
   try {
     const response = await fetch(`${endpoint}/category/${category}?limit=0`);
-    if (!response.ok) return { message: "Failed to fetch sunglasses." };
+    if (!response.ok) return { message: 'Failed to fetch sunglasses.' };
     const data = await response.json();
     return data;
   } catch (error) {
@@ -46,7 +40,9 @@ export async function fetchProductsByCategory(
 }
 
 export async function fetchBySearch(
-  query: string = "", limit: number = 0, skip: number
+  query: string = '',
+  limit: number = 0,
+  skip: number
 ): Promise<ProductResponse | { message: string }> {
   try {
     const response = await fetch(`${endpoint}/search?q=${query}&limit=${limit}&skip=${skip}`);
@@ -75,3 +71,18 @@ export async function fetchBySearch(
 //   );
 //   return chosenProducts;
 // }
+
+export async function deleteProduct(id: number) {
+  try {
+    const response = await fetch(`${endpoint}/${id}`, {
+      method: 'DELETE',
+    });
+    if (!response.ok) {
+      console.log('responnse not ok');
+    }
+    const data = await response.json();
+    return data;
+  } catch (err) {
+    return err;
+  }
+}
