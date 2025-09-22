@@ -5,7 +5,6 @@
   --foreground: #171717;
   --brighter: #85837d;
   --darker: #a79c91;
-
 }
 
 html,
@@ -72,12 +71,4 @@ a {
   html {
     color-scheme: dark;
   }
-}
-
-#product-card {
-  display: grid;
-  justify-content: center;
-  background-color: var(--darker);
-  color: black;
-  text-align: center;
 }
