@@ -1,5 +1,4 @@
 import { fetchProducts } from "@/lib/data/productdata";
-import DeleteButton from "@/components/deleteButton";
 import Form from "next/form";
 import ProductList from "@/components/productlist";
 
