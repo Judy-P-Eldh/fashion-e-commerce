@@ -2,6 +2,7 @@ import {
   AllowedCategory,
   Product,
   ProductResponse,
+  DeleteResponse,
 } from "../interfaces/product";
 const endpoint = "https://dummyjson.com/products";
 
@@ -46,10 +47,14 @@ export async function fetchProductsByCategory(
 }
 
 export async function fetchBySearch(
-  query: string = "", limit: number = 0, skip: number
+  query: string = "",
+  limit: number = 0,
+  skip: number
 ): Promise<ProductResponse | { message: string }> {
   try {
-    const response = await fetch(`${endpoint}/search?q=${query}&limit=${limit}&skip=${skip}`);
+    const response = await fetch(
+      `${endpoint}/search?q=${query}&limit=${limit}&skip=${skip}`
+    );
     if (!response.ok) return { message: `Failed to fetch ${query}.` };
     const data = await response.json();
     return data;
@@ -75,3 +80,22 @@ export async function fetchBySearch(
 //   );
 //   return chosenProducts;
 // }
+
+export async function deleteProduct(id: number) {
+  "use server";
+  try {
+    const response = await fetch(`${endpoint}/${id}`, {
+      method: "DELETE",
+    });
+    if (!response.ok) {
+      console.log({
+        success: false,
+        error: "failed to delete product",
+      });
+    }
+    const product: Product = await response.json();
+    console.log({ success: true, product });
+  } catch (err) {
+    console.log({ success: false, error: (err as Error).message });
+  }
+}
