@@ -14,7 +14,6 @@ export default async function Home() {
 
   return (
     <main className="content-grid">
-      <DeleteButton />
       <section className="full-width inherit grid bg-[#D6CCC2] py-10">
         <Form className="breakout" action="submit">
           <h2 className="text-2xl mb-5 font-courier-prime">
