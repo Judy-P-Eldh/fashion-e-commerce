@@ -1,10 +1,37 @@
 @import "tailwindcss";
 
+@theme {
+  --color-beige-bg: #f2eae1;
+  --color-dark-bg: #d6ccc2;
+  --color-border-clr: #85837d;
+  --color-light: #fffaf5;
+  /* #656565; #a79c91; */
+
+  --font-courier-prime: var(--font-courier-prime), monospace;
+  --font-italiana: var(--font-italiana), serif;
+}
+
 :root {
   --background: #f2eae1;
-  --foreground: #171717;
-  --brighter: #85837d;
-  --darker: #a79c91;
+  --foreground: #000000;
+}
+
+@layer base {
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-italiana);
+  }
+
+  h2 {
+    font-size: var(--text-4xl);
+  }
+
+  h3 {
+    font-size: var(--text-2xl);
+  }
 }
 
 html,
@@ -19,13 +46,6 @@ body {
   font-family: var(--font-courier-prime), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: var(--font-italiana);
 }
 
 .content-grid {
