@@ -1,4 +1,4 @@
-import { AllowedCategory, Product, ProductResponse } from '../interfaces/product';
+import { AllowedCategory, Product, ProductResponse, DeleteResponse } from '../interfaces/product';
 const endpoint = 'https://dummyjson.com/products';
 
 export async function fetchProducts(limit: number = 0): Promise<Product[] | { message: string }> {
@@ -72,17 +72,20 @@ export async function fetchBySearch(
 //   return chosenProducts;
 // }
 
-export async function deleteProduct(id: number) {
+export async function deleteProduct(id: number): Promise<DeleteResponse> {
   try {
     const response = await fetch(`${endpoint}/${id}`, {
       method: 'DELETE',
     });
     if (!response.ok) {
-      console.log('responnse not ok');
+      return {
+        success: false,
+        error: 'failed to delete product',
+      };
     }
-    const data = await response.json();
-    return data;
+    const product: Product = await response.json();
+    return { success: true, product};
   } catch (err) {
-    return err;
+    return { success: false, error: (err as Error).message };
   }
 }
