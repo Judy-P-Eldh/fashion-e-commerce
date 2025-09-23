@@ -1,9 +1,11 @@
-import { fetchProducts } from "@/lib/data/productdata";
-import { PlusIcon, Trash2Icon} from "lucide-react";
+import DeleteButton from "@/components/deleteButton";
+import { fetchProducts, deleteProduct } from "@/lib/data/productdata";
+import { PlusIcon } from "lucide-react";
 
 export default async function AdminPage() {
   const products = await fetchProducts();
   const productsArray = Array.isArray(products) ? products : [];
+
   const errorMessage =
     typeof products === "object" && "message" in products
       ? products.message
@@ -21,11 +23,12 @@ export default async function AdminPage() {
       {productsArray.length > 0 ? (
         <ul className="content">
           {productsArray.map((product) => (
-            <li className="rounded-sm flex items-center justify-between p-2 align-text-bottom nth-[odd]:bg-dark-bg hover:text-red-700">
+            <li
+              key={product.id}
+              className="rounded-sm flex items-center justify-between p-2 align-text-bottom nth-[odd]:bg-dark-bg hover:text-red-700"
+            >
               {product.id}, {product.title}
-              <button>
-                <Trash2Icon strokeWidth={1} size={25} />
-              </button>
+              <DeleteButton id={product.id} handleClick={deleteProduct} />
             </li>
           ))}
         </ul>

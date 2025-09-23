@@ -1,9 +1,11 @@
 import { fetchProducts } from "@/lib/data/productdata";
+import DeleteButton from "@/components/deleteButton";
 import Form from "next/form";
 import ProductList from "@/components/productlist";
 
 export default async function Home() {
   const products = await fetchProducts(20);
+
   const productsArray = Array.isArray(products) ? products : [];
   const errorMessage =
     typeof products === "object" && "message" in products
