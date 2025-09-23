@@ -3,21 +3,21 @@
 @theme {
   --color-beige-bg: #f2eae1;
   --color-dark-bg: #d6ccc2;
+  --color-darker: #a79c91;
   --color-border-clr: #85837d;
   --color-light: #fffaf5;
-  /* #656565; #a79c91; */
+  /* darkest: #656565*/
 
   --font-courier-prime: var(--font-courier-prime), monospace;
   --font-italiana: var(--font-italiana), serif;
 }
 
 :root {
-  --background: #f2eae1;
+  --background: var(--color-beige-bg);
   --foreground: #000000;
 }
 
 @layer base {
-
   h1,
   h2,
   h3,
