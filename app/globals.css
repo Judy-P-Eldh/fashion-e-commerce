@@ -34,11 +34,11 @@
   }
 }
 
-@layer components {
+/* @layer components {
   .button {
-    /* styling */
+    styling 
   }
-}
+}*/
 
 html,
 body {
