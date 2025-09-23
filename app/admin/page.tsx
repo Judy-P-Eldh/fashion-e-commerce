@@ -1,14 +1,12 @@
 import DeleteButton from "@/components/deleteButton";
-import { fetchProducts } from "@/lib/data/productdata";
+import { fetchProducts, deleteProduct} from "@/lib/data/productdata";
 import { PlusIcon } from "lucide-react";
 
 export default async function AdminPage() {
   const products = await fetchProducts();
   const productsArray = Array.isArray(products) ? products : [];
-  function handleDelete(message: string) {
-    console.log("message", message);
-    
-  }
+
+
   const errorMessage =
     typeof products === "object" && "message" in products
       ? products.message
@@ -26,12 +24,10 @@ export default async function AdminPage() {
       {productsArray.length > 0 ? (
         <ul className="content">
           {productsArray.map((product) => (
-            <li
-              className="rounded-sm flex items-center justify-between p-2 align-text-bottom nth-[odd]:bg-stone-400 hover:text-red-700"
-              key={product.id}
-            >
+            <li key={product.id} className="rounded-sm flex items-center justify-between p-2 align-text-bottom nth-[odd]:bg-stone-400 hover:text-red-700">
+    
               {product.id}, {product.title}
-              <DeleteButton id={product.id} logger={handleDelete} />
+              <DeleteButton id={product.id} handleClick={deleteProduct} />
             </li>
           ))}
         </ul>

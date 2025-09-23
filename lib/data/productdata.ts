@@ -72,20 +72,25 @@ export async function fetchBySearch(
 //   return chosenProducts;
 // }
 
-export async function deleteProduct(id: number): Promise<DeleteResponse> {
-  try {
+
+ 
+export async function deleteProduct(id: number) {
+  "use server"
+    try {
     const response = await fetch(`${endpoint}/${id}`, {
       method: 'DELETE',
     });
     if (!response.ok) {
-      return {
+      console.log({
         success: false,
         error: 'failed to delete product',
-      };
+      })  
     }
     const product: Product = await response.json();
-    return { success: true, product};
+    console.log({ success: true, product});
+    
   } catch (err) {
-    return { success: false, error: (err as Error).message };
+    console.log( { success: false, error: (err as Error).message });
   }
+  
 }
