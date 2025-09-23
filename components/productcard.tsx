@@ -7,10 +7,10 @@ export default function ProductCard({ product }: { product: Product }) {
   const image = product.images[0];
   return (
     // Färgen??
-    <article className="flex flex-col justify-between h-full p-5 border rounded-3xl bg-[#D6CCC2]">
+    <article className="flex flex-col justify-between h-full p-5 rounded-lg border-2 border-border-clr shadow-lg bg-dark-bg">
       <Link href={`/products/${product.id}`}>
         <div className="grid text-center">
-          <h2 className="text-2xl">{product.title}</h2>
+          <h3>{product.title}</h3>
           <Image
             className="order-first m-auto"
             src={image}
@@ -20,7 +20,7 @@ export default function ProductCard({ product }: { product: Product }) {
           />
         </div>
       </Link>
-      <div className="text-center">
+      <div className="flex flex-col items-center text-center">
         <p className="py-2">$ {product.price}</p>
         <BuyButton productName={product.title} />
       </div>

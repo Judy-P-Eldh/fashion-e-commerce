@@ -21,7 +21,7 @@ export default async function AdminPage() {
       {productsArray.length > 0 ? (
         <ul className="content">
           {productsArray.map((product) => (
-            <li className="rounded-sm flex items-center justify-between p-2 align-text-bottom nth-[odd]:bg-stone-400 hover:text-red-700">
+            <li className="rounded-sm flex items-center justify-between p-2 align-text-bottom nth-[odd]:bg-dark-bg hover:text-red-700">
               {product.id}, {product.title}
               <button>
                 <Trash2Icon strokeWidth={1} size={25} />

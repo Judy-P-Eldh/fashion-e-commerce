@@ -24,7 +24,7 @@ export default async function SearchPage({
     <main>
       <section className="content-grid">
         <div className="content pt-10">
-          <h2 className="text-center text-4xl">Search results for "{query}"</h2>
+          <h2 className="text-center">Search results for "{query}"</h2>
           {products.length > 0 ? (
             <ProductList products={products} />
           ) : (
