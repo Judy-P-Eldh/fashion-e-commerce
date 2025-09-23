@@ -1,10 +1,17 @@
-import { AllowedCategory, Product, ProductResponse, DeleteResponse } from '../interfaces/product';
-const endpoint = 'https://dummyjson.com/products';
+import {
+  AllowedCategory,
+  Product,
+  ProductResponse,
+  DeleteResponse,
+} from "../interfaces/product";
+const endpoint = "https://dummyjson.com/products";
 
-export async function fetchProducts(limit: number = 0): Promise<Product[] | { message: string }> {
+export async function fetchProducts(
+  limit: number = 0
+): Promise<Product[] | { message: string }> {
   try {
     const response = await fetch(`${endpoint}?limit=${limit}`);
-    if (!response.ok) return { message: 'Failed to fetch products.' };
+    if (!response.ok) return { message: "Failed to fetch products." };
     const data = await response.json();
     return data.products;
   } catch (error) {
@@ -30,7 +37,7 @@ export async function fetchProductsByCategory(
 ): Promise<ProductResponse[] | { message: string }> {
   try {
     const response = await fetch(`${endpoint}/category/${category}?limit=0`);
-    if (!response.ok) return { message: 'Failed to fetch sunglasses.' };
+    if (!response.ok) return { message: "Failed to fetch sunglasses." };
     const data = await response.json();
     return data;
   } catch (error) {
@@ -40,12 +47,14 @@ export async function fetchProductsByCategory(
 }
 
 export async function fetchBySearch(
-  query: string = '',
+  query: string = "",
   limit: number = 0,
   skip: number
 ): Promise<ProductResponse | { message: string }> {
   try {
-    const response = await fetch(`${endpoint}/search?q=${query}&limit=${limit}&skip=${skip}`);
+    const response = await fetch(
+      `${endpoint}/search?q=${query}&limit=${limit}&skip=${skip}`
+    );
     if (!response.ok) return { message: `Failed to fetch ${query}.` };
     const data = await response.json();
     return data;
@@ -72,25 +81,21 @@ export async function fetchBySearch(
 //   return chosenProducts;
 // }
 
-
- 
 export async function deleteProduct(id: number) {
-  "use server"
-    try {
+  "use server";
+  try {
     const response = await fetch(`${endpoint}/${id}`, {
-      method: 'DELETE',
+      method: "DELETE",
     });
     if (!response.ok) {
       console.log({
         success: false,
-        error: 'failed to delete product',
-      })  
+        error: "failed to delete product",
+      });
     }
     const product: Product = await response.json();
-    console.log({ success: true, product});
-    
+    console.log({ success: true, product });
   } catch (err) {
-    console.log( { success: false, error: (err as Error).message });
+    console.log({ success: false, error: (err as Error).message });
   }
-  
 }
