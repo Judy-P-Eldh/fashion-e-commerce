@@ -1,5 +1,5 @@
 import DeleteButton from "@/components/deleteButton";
-import { fetchProducts, deleteProduct } from "@/lib/data/productdata";
+import { fetchProducts } from "@/lib/data/productdata";
 import { PlusIcon } from "lucide-react";
 
 export default async function AdminPage() {
@@ -27,8 +27,8 @@ export default async function AdminPage() {
               key={product.id}
               className="rounded-sm flex items-center justify-between p-2 align-text-bottom nth-[odd]:bg-beige-medium hover:text-red-700"
             >
-              {product.id}: {product.title}
-              <DeleteButton id={product.id} handleClick={deleteProduct} />
+              {product.id}, {product.title}
+              <DeleteButton id={product.id} />
             </li>
           ))}
         </ul>
