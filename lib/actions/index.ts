@@ -1,8 +1,8 @@
+"use server";
 import { endpoint } from "@/lib/data/productdata"
 import { Product } from "../interfaces/product";
 
 export async function deleteProduct(formData: FormData) {
-  "use server";
 
   const id = formData.get("id") as string; 
   
