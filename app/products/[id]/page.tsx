@@ -23,8 +23,8 @@ export default async function Page({
           height={400}
         />
         <h2>{product.title}</h2>
-        <p>${product.price}</p>
         <p>{product.description}</p>
+        <p>${product.price}</p>
       </article>
       <BuyButton productName={product.title} />
     </main>
