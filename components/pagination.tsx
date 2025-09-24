@@ -6,12 +6,13 @@ export default function Pagination({
   maxPage,
   baseUrl,
 }: PaginationProps) {
+  const separator = baseUrl.includes("?") ? "&" : "?";
   return (
     <div className="flex gap-4 justify-center">
       {currentPage > 1 && (
         <Link
           className="p-2 border-2 rounded-sm"
-          href={`${baseUrl}&page=${currentPage - 1}`}
+          href={`${baseUrl}${separator}page=${currentPage - 1}`}
         >
           Previous
         </Link>
@@ -22,7 +23,7 @@ export default function Pagination({
       {currentPage < maxPage && (
         <Link
           className="p-2 border-2 rounded-sm"
-          href={`${baseUrl}&page=${currentPage + 1}`}
+          href={`${baseUrl}${separator}page=${currentPage + 1}`}
         >
           Next
         </Link>
