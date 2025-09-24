@@ -33,10 +33,14 @@ export async function fetchProductById(id: number): Promise<Product> {
 }
 
 export async function fetchProductsByCategory(
-  category: AllowedCategory
+  category: AllowedCategory,
+  limit: number = 0,
+  skip: number
 ): Promise<ProductResponse | { message: string }> {
   try {
-    const response = await fetch(`${endpoint}/category/${category}?limit=0`);
+    const response = await fetch(
+      `${endpoint}/category/${category}?limit=${limit}&skip=${skip}`
+    );
     if (!response.ok) return { message: `Failed to fetch ${category}.` };
     const data = await response.json();
     return data;
@@ -80,5 +84,3 @@ export async function fetchBySearch(
 //   );
 //   return chosenProducts;
 // }
-
-
