@@ -13,7 +13,7 @@ export default async function Home() {
 
   return (
     <main className="content-grid">
-      <section className="full-width inherit grid bg-dark-bg py-10">
+      <section className="full-width inherit grid bg-beige-medium py-10">
         <Form className="breakout" action="submit">
           <h2 className="mb-5 font-courier-prime text-xl">
             Sign up for our newsletter and get 10% off your first order
