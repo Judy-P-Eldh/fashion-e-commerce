@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navigation from "@/components/navigation/navigation";
 import Footer from "@/components/footer";
-import{ Italiana, Courier_Prime }  from 'next/font/google'
-
+import { Italiana, Courier_Prime } from "next/font/google";
 
 //uppdate when we have a company/brand name
 export const metadata: Metadata = {
@@ -13,13 +12,13 @@ export const metadata: Metadata = {
 };
 
 const italiana = Italiana({
-  weight: '400',
-  variable: "--font-italiana"
-})
+  weight: "400",
+  variable: "--font-italiana",
+});
 const courierPrime = Courier_Prime({
-  weight: '400',
-  variable: "--font-courier-prime"
-})
+  weight: "400",
+  variable: "--font-courier-prime",
+});
 
 export default function RootLayout({
   children,
