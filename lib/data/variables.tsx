@@ -26,4 +26,17 @@ export const collections = {
   accessories: accessoryCategories,
 } as const;
 
+export const categoryLabels: Record<string, string> = {
+  "womens-dresses": "Women's dresses",
+  "womens-shoes": "Women's shoes",
+  "womens-watches": "Women's watches",
+  "womens-bags": "Women's bags",
+  "womens-jewellery": "Women's jewellery",
+  "mens-shirts": "Men's shirts",
+  "mens-shoes": "Men's shoes",
+  "mens-watches": "Men's watches",
+  "tops": "Tops",
+  "sunglasses": "Sunglasses",
+};
+
 export const inShoppingCart: string[] = [];
