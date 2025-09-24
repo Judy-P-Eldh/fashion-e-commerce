@@ -1,17 +1,24 @@
 export const womenCategories = [
-  'womens-dresses',
-  'womens-shoes',
-  'womens-watches',
-  'womens-bags',
-  'womens-jewellery',
+  "womens-dresses",
+  "womens-shoes",
+  "womens-watches",
+  "womens-bags",
+  "womens-jewellery",
+  "tops",
 ] as const;
-export const menCategories = ['tops', 'mens-shirts', 'mens-shoes', 'mens-watches'] as const;
+
+export const menCategories = [
+  "mens-shirts",
+  "mens-shoes",
+  "mens-watches",
+] as const;
+
 export const accessoryCategories = [
-  'sunglasses',
-  'mens-watches',
-  'womens-watches',
-  'womens-bags',
-  'womens-jewellery',
+  "sunglasses",
+  "mens-watches",
+  "womens-watches",
+  "womens-bags",
+  "womens-jewellery",
 ] as const;
 
 export const allowedCategoriesSet = new Set([
