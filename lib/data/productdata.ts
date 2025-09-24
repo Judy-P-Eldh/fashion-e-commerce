@@ -4,7 +4,7 @@ import {
   ProductResponse,
   DeleteResponse,
 } from "../interfaces/product";
-const endpoint = "https://dummyjson.com/products";
+export const endpoint = "https://dummyjson.com/products";
 
 export async function fetchProducts(
   limit: number = 0
@@ -81,21 +81,4 @@ export async function fetchBySearch(
 //   return chosenProducts;
 // }
 
-export async function deleteProduct(id: number) {
-  "use server";
-  try {
-    const response = await fetch(`${endpoint}/${id}`, {
-      method: "DELETE",
-    });
-    if (!response.ok) {
-      console.log({
-        success: false,
-        error: "failed to delete product",
-      });
-    }
-    const product: Product = await response.json();
-    console.log({ success: true, product });
-  } catch (err) {
-    console.log({ success: false, error: (err as Error).message });
-  }
-}
+
