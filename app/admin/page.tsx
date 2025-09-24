@@ -12,7 +12,7 @@ export default async function AdminPage() {
       : "Could not load products.";
   return (
     <main className="content-grid">
-      <h2>Admin page</h2>
+      <h2 className="content text-center">Admin page</h2>
       <section className="content">
         <button className="flex items-center gap-2 text-sm border-1 p-2 my-2 rounded-sm hover:bg-beige-dark">
           <PlusIcon />
