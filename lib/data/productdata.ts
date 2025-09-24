@@ -34,10 +34,10 @@ export async function fetchProductById(id: number): Promise<Product> {
 
 export async function fetchProductsByCategory(
   category: AllowedCategory
-): Promise<ProductResponse[] | { message: string }> {
+): Promise<ProductResponse | { message: string }> {
   try {
     const response = await fetch(`${endpoint}/category/${category}?limit=0`);
-    if (!response.ok) return { message: "Failed to fetch sunglasses." };
+    if (!response.ok) return { message: `Failed to fetch ${category}.` };
     const data = await response.json();
     return data;
   } catch (error) {
