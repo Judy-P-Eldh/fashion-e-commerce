@@ -1,7 +1,7 @@
 import { collections } from "@/lib/data/variables";
 import { CollectionKey } from "@/lib/interfaces/product";
 import Link from "next/link";
-export default async function Page({
+export default async function CollectionPage({
   params,
 }: {
   params: Promise<{ selectedCollection?: CollectionKey }>;
@@ -29,7 +29,7 @@ export default async function Page({
         {collections[selectedCollection].map((category) => {
           return (
             <li key={category}>
-              <Link href={`/search?category=${category}`}>{category}</Link>
+              <Link href={`${selectedCollection}/${category}`}>{category}</Link>
             </li>
           );
         })}
