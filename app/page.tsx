@@ -1,5 +1,4 @@
 import { fetchProducts } from "@/lib/data/productdata";
-import DeleteButton from "@/components/deleteButton";
 import Form from "next/form";
 import ProductList from "@/components/productlist";
 
@@ -14,23 +13,21 @@ export default async function Home() {
 
   return (
     <main className="content-grid">
-      <section className="full-width inherit grid bg-[#D6CCC2] py-10">
+      <section className="full-width inherit grid bg-beige-medium py-10">
         <Form className="breakout" action="submit">
-          <h2 className="text-2xl mb-5 font-courier-prime">
+          <h2 className="mb-5 font-courier-prime text-xl">
             Sign up for our newsletter and get 10% off your first order
           </h2>
           <label htmlFor="email" className="sr-only">
             Email
           </label>
-          <input type="text" className="bg-white" />
+          <input type="text" className="bg-light" />
           <button>Sign me up</button>
         </Form>
       </section>
 
       <section className="content pt-10">
-        <h2 className="content text-center text-4xl">
-          Browse our best sellers
-        </h2>
+        <h2 className="content text-center">Browse our best sellers</h2>
         {productsArray.length > 0 ? (
           <ProductList products={productsArray.slice(0, 4)} />
         ) : (
@@ -39,7 +36,7 @@ export default async function Home() {
       </section>
 
       <section className="content pt-10">
-        <h2 className="content text-center text-4xl">News</h2>
+        <h2 className="content text-center">News</h2>
         {productsArray.length > 0 ? (
           <ProductList products={productsArray.slice(10, 18)} />
         ) : (
