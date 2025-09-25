@@ -11,7 +11,7 @@ export default async function CollectionPage({
   let { selectedCollection = "women" } = await params;
 
   return (
-    <div className="content-grid mt-5">
+    <div className="content-grid place-self-center max-w-5xl mt-5 ">
       <section className="content flex justify-evenly gap-5 flex-wrap uppercase">
         {Object.keys(collections).map((collection) => {
           return (
