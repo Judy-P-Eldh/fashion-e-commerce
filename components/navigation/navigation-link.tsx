@@ -11,7 +11,7 @@ export default function NavigationLink({
   text: string;
 }) {
   return (
-    <Link href={href} className={isActive ? 'underline' : ''}>
+    <Link href={href} className={isActive ? 'underline underline-offset-4' : ''}>
       {text}
     </Link>
   );
