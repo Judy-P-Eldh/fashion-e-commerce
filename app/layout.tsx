@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navigation from "@/components/navigation/navigation";
-import Footer from "@/components/footer";
+import Footer from "@/components/footer/footer";
 import { Italiana, Courier_Prime } from "next/font/google";
 import { Toaster } from 'react-hot-toast';
  
