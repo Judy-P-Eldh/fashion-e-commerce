@@ -1,16 +1,16 @@
 import { fetchBySearch } from "@/lib/data/productdata";
 import ProductList from "@/components/productlist";
-import Link from "next/link";
+import Pagination from "@/components/pagination";
 
 export default async function SearchPage({
   searchParams,
 }: {
   searchParams: Promise<{ [key: string]: string | undefined }>;
 }) {
-  const { query, page = 1 } = await searchParams; // hämtar sökquery och sätter page till 1 som start
-  const pageNum = Number(page); // konverterar page (som är string) till number för framtida hantering
-  const limit = 8; // ska visa 8 produkter per sida
-  const skip = (pageNum - 1) * limit; // räknar ut hur många produkter i API:et som ska hoppas över på sidan (sida1: (1-1)*6=0 -> startar från 0, sida2: (2-1)*6=6 -> hoppar över första 6)
+  const { query, page = 1 } = await searchParams;
+  const pageNum = Number(page);
+  const limit = 8;
+  const skip = (pageNum - 1) * limit;
 
   const result = await fetchBySearch(query, limit, skip);
 
@@ -18,7 +18,7 @@ export default async function SearchPage({
     return <p> {result.message}</p>;
 
   const { products, total } = result;
-  const maxPage = Math.ceil(total / limit); // räknar ut
+  const maxPage = Math.ceil(total / limit);
 
   return (
     <main>
@@ -33,18 +33,11 @@ export default async function SearchPage({
         </div>
 
         <div className="content flex gap-4 justify-center">
-          <Link
-            className="p-2 border-2 rounded-sm m-2"
-            href={`/search?query=${query}&page=${pageNum - 1}`}
-          >
-            Previous
-          </Link>
-          <Link
-            className="p-2 border-2 rounded-sm m-2"
-            href={`/search?query=${query}&page=${pageNum + 1}`}
-          >
-            Next
-          </Link>
+          <Pagination
+            currentPage={pageNum}
+            maxPage={maxPage}
+            baseUrl={`/search?query=${query}`}
+          />
         </div>
       </section>
     </main>
