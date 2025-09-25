@@ -14,44 +14,26 @@ export default async function Page({
 
   if (!product) notFound();
   return (
-    /*     <main className="min-h-dvh grid">
-      <article>
-        <Image
-          src={product.thumbnail}
-          alt={product.title}
-          width={400}
-          height={400}
-        />
-        <h2>{product.title}</h2>
-        <p>{product.description}</p>
-        <p>${product.price}</p>
+    <main className="content-grid place-self-center max-w-6xl">
+      <article className="content m-5 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="flex justify-center">
+          <Image
+            src={product.thumbnail}
+            alt={product.title}
+            width={400}
+            height={400}
+            className="rounded-lg object-cover shadow-lg bg-light"
+          />
+        </div>
+        <div className="flex flex-col gap-5">
+          <h2 className="font-bold">{product.title}</h2>
+          <p>{product.description}</p>
+          <p className="text-2xl font-bold">${product.price}</p>
+          <div className="flex-start">
+            <BuyButton productName={product.title} />
+          </div>
+        </div>
       </article>
-      <BuyButton productName={product.title} />
-    </main> 
-    */
-
-    <main className="max-w-4xl items-center justify-center m-5 grid grid-cols-1 md:grid-cols-2 gap-8 ">
-      <div className="flex items-center justify-center">
-        <Image
-          src={product.thumbnail}
-          alt={product.title}
-          width={400}
-          height={400}
-          className="rounded-lg object-cover shadow-lg bg-light"
-        />
-      </div>
-
-      <div className="flex flex-col">
-        <div>
-          <h2 className="font-bold mb-4">{product.title}</h2>
-          <p className="mb-6">{product.description}</p>
-        </div>
-
-        <div className="flex flex-col items-start gap-4">
-          <p className="text-2xl font-semibold">${product.price}</p>
-          <BuyButton productName={product.title} />
-        </div>
-      </div>
     </main>
   );
 }
