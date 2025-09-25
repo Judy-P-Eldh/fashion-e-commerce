@@ -1,14 +1,27 @@
+import { Plus } from 'lucide-react';
 export default function FooterNavColumn({
   children,
   title,
+  extraContent = false,
 }: {
   children: React.ReactNode;
   title: string;
+  extraContent?: boolean;
 }) {
   return (
-    <nav area-label={title} className="flex md:flex-col justify-between md:justify-start border-b md:border-0">
-      <h3 className="font-courier-prime mb-6">{title}</h3>
+    <nav
+      area-label={title}
+      className="flex lg:flex-col justify-between lg:justify-start border-b border-dark lg:border-0 py-2"
+    >
+      <h3 className="font-courier-prime lg:mb-6">{title}</h3>
       {children}
+      {extraContent ? (
+        <button>
+          <Plus className="lg:hidden"></Plus>{' '}
+        </button>
+      ) : (
+        ''
+      )}
     </nav>
   );
 }

@@ -16,15 +16,15 @@ export default function Footer() {
 
   return (
     <footer className="content-grid py-10 text-black grid ">
-      <section className="breakout flex flex-col-reverse md:grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr_1fr] border-t pt-10">
-        <aside className="flex items-center">
-          <h2 className="text-6xl lg:text-9xl">
+      <section className="breakout flex flex-col-reverse lg:grid grid-cols-1 lg:grid-cols-[1.5fr_1fr_1fr_1fr] lg:border-t border-dark lg:pt-10">
+        <aside className="flex items-center justify-center lg:justify-start mt-8">
+          <h2 className="text-6xl lg:text-9xl py-1">
             <Link href="/">LOGO</Link>
           </h2>
         </aside>
 
-        <FooterNavColumn title="About us">
-          <ul className="hidden md:block">
+        <FooterNavColumn title="About us" extraContent={true}>
+          <ul className="hidden lg:block">
             <li>
               <Link href="/about">About BRAND</Link>
             </li>
@@ -39,8 +39,8 @@ export default function Footer() {
             </li>
           </ul>
         </FooterNavColumn>
-        <FooterNavColumn title="Get Help">
-          <ul className="hidden md:block">
+        <FooterNavColumn title="Get Help" extraContent={true}>
+          <ul className="hidden lg:block">
             <li>
               <Link href="/contact">Contact</Link>
             </li>
@@ -56,7 +56,7 @@ export default function Footer() {
           </ul>
         </FooterNavColumn>
         <FooterNavColumn title="Socials">
-          <ul className="flex gap-2 md:gap-4">
+          <ul className="flex gap-2 lg:gap-4">
             {socials.map((item) => {
               return (
                 <Link href={item.href} key={item.name}>
