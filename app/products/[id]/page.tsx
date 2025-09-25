@@ -18,7 +18,7 @@ export default async function Page({
       <article className="content m-5 grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="flex justify-center">
           <Image
-            src={product.thumbnail}
+            src={product.images[0]}
             alt={product.title}
             width={400}
             height={400}
