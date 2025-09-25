@@ -3,7 +3,8 @@ import "./globals.css";
 import Navigation from "@/components/navigation/navigation";
 import Footer from "@/components/footer";
 import { Italiana, Courier_Prime } from "next/font/google";
-
+import { Toaster } from 'react-hot-toast';
+ 
 //uppdate when we have a company/brand name
 export const metadata: Metadata = {
   title: "[Brand name] fashion e-commerce",
@@ -28,6 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${italiana.variable} ${courierPrime.variable}`}>
       <body>
+        <Toaster />
         <Navigation />
         {children}
         <Footer />
