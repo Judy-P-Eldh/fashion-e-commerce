@@ -17,7 +17,11 @@ export default async function CollectionPage({
           return (
             <Link key={collection} href={`${collection}`}>
               <h2
-                className={collection === selectedCollection ? "underline" : ""}
+                className={
+                  collection === selectedCollection
+                    ? "underline decoration-2 underline-offset-4"
+                    : ""
+                }
               >
                 {collection}
               </h2>
@@ -31,7 +35,7 @@ export default async function CollectionPage({
           return (
             <li key={category}>
               <Link href={`${selectedCollection}/${category}`}>
-                <article className="flex justify-center items-center h-40 rounded-lg border-2 border-dark shadow-lg bg-beige-medium">
+                <article className="flex justify-center items-center h-40 p-5 rounded-lg border-2 border-dark shadow-lg bg-beige-medium">
                   <h3 className="text-center text-3xl">
                     {categoryLabels[category]}
                   </h3>
