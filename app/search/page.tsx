@@ -1,6 +1,6 @@
 import { fetchBySearch } from "@/lib/data/productdata";
 import ProductList from "@/components/productlist";
-import Link from "next/link";
+import Pagination from "@/components/pagination";
 
 export default async function SearchPage({
   searchParams,
@@ -18,7 +18,7 @@ export default async function SearchPage({
     return <p> {result.message}</p>;
 
   const { products, total } = result;
-  const maxPage = Math.ceil(total / limit); // räknar ut
+  const maxPage = Math.ceil(total / limit); // räknar ut hur många sidor som behövs för att visa alla produkter
 
   return (
     <main>
@@ -33,18 +33,11 @@ export default async function SearchPage({
         </div>
 
         <div className="content flex gap-4 justify-center">
-          <Link
-            className="p-2 border-2 rounded-sm m-2"
-            href={`/search?query=${query}&page=${pageNum - 1}`}
-          >
-            Previous
-          </Link>
-          <Link
-            className="p-2 border-2 rounded-sm m-2"
-            href={`/search?query=${query}&page=${pageNum + 1}`}
-          >
-            Next
-          </Link>
+          <Pagination
+            currentPage={pageNum}
+            maxPage={maxPage}
+            baseUrl={`/search?query=${query}`}
+          />
         </div>
       </section>
     </main>
