@@ -17,10 +17,10 @@ export default async function CollectionPage({
           return (
             <Link key={collection} href={`${collection}`}>
               <h2
-                className={
+                className={`text-2xl ${
                   collection === selectedCollection
                     ? "underline decoration-2 underline-offset-4"
-                    : ""
+                    : ""}`
                 }
               >
                 {collection}
