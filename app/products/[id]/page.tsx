@@ -14,8 +14,8 @@ export default async function Page({
 
   if (!product) notFound();
   return (
-    <main className="content-grid place-self-center max-w-6xl">
-      <article className="content m-5 grid grid-cols-1 md:grid-cols-2 gap-8">
+    <main className="content-grid place-self-center">
+      <article className="content-small m-5 grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="flex justify-center">
           <Image
             src={product.images[0]}

@@ -75,7 +75,7 @@ body {
 
 .content-small {
   grid-column: content-start / content-end;
-  max-width: 50rem;
+  max-width: 70rem;
   width: 100%;
   justify-self: center;
 }
