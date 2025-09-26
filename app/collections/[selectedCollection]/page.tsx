@@ -35,7 +35,7 @@ export default async function CollectionPage({
           return (
             <li key={category}>
               <Link href={`${selectedCollection}/${category}`}>
-                <article className="grid place-items-center h-40 p-5 rounded-lg border-2 border-dark shadow-lg bg-beige-medium">
+                <article className="grid place-items-center h-40 min-w-70 p-5 rounded-lg border-2 border-dark shadow-lg bg-beige-medium">
                   <h3 className="text-center text-3xl">
                     {categoryLabels[category]}
                   </h3>
