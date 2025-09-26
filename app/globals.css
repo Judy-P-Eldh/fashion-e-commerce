@@ -73,6 +73,19 @@ body {
   grid-template-columns: inherit;
 }
 
+.content-small {
+  grid-column: content-start / content-end;
+  max-width: 50rem;
+  width: 100%;
+  justify-self: center;
+}
+.content-x-small {
+  grid-column: content-start / content-end;
+  max-width: 30rem;
+  width: 100%;
+  justify-self: center;
+}
+
 .content {
   grid-column: content-start / content-end;
 }
