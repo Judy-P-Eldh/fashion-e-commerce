@@ -11,16 +11,16 @@ export default async function CollectionPage({
   let { selectedCollection = "women" } = await params;
 
   return (
-    <div className="content-grid place-self-center max-w-5xl mt-5 ">
-      <section className="content flex justify-evenly gap-5 flex-wrap uppercase">
+    <div className="content-grid place-self-center mt-5 ">
+      <section className="content-small flex justify-evenly gap-5 flex-wrap uppercase">
         {Object.keys(collections).map((collection) => {
           return (
             <Link key={collection} href={`${collection}`}>
               <h2
-                className={
+                className={`text-2xl ${
                   collection === selectedCollection
                     ? "underline decoration-2 underline-offset-4"
-                    : ""
+                    : ""}`
                 }
               >
                 {collection}
@@ -30,12 +30,12 @@ export default async function CollectionPage({
         })}
       </section>
 
-      <ul className="content grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 py-10 gap-6 items-stretch">
+      <ul className="content-small grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 py-10 gap-6 items-stretch">
         {collections[selectedCollection].map((category) => {
           return (
             <li key={category}>
               <Link href={`${selectedCollection}/${category}`}>
-                <article className="grid place-items-center h-40 p-5 rounded-lg border-2 border-dark shadow-lg bg-beige-medium">
+                <article className="grid place-items-center h-40 min-w-70 p-5 rounded-lg border-2 border-dark shadow-lg bg-beige-medium">
                   <h3 className="text-center text-3xl">
                     {categoryLabels[category]}
                   </h3>
