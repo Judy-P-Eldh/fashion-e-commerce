@@ -1,7 +1,7 @@
 export default function ContactPage() {
   return (
     <main className="content-grid">
-      <div className="content rounded-2xl bg-light p-8 shadow">
+      <div className="content-x-small rounded-2xl bg-light p-8 shadow">
         <h2>Contact us</h2>
 
         <p>
