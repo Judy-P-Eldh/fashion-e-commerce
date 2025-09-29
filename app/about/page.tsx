@@ -6,7 +6,7 @@ export default function AboutPage() {
       <article className="content-small m-5 gap-5 grid grid-cols-1 md:grid-cols-2">
         <Image
           src={"/about.jpg"}
-          alt={""}
+          alt={"All four employees on AW in the snow"}
           width={500}
           height={400}
           className="rounded-lg object-cover shadow-lg bg-light place-self-center"
