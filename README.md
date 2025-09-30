@@ -194,6 +194,3 @@ The project is developed for educational purposes and is not meant for real prod
 - [malpisen](#https://github.com/malpisen)
 - [Judy-P-Eldh](#https://github.com/Judy-P-Eldh)
 - [gentlelynx](#https://github.com/gentlelynx)
-
-
-
