@@ -26,16 +26,16 @@ This is a collaborative project, the purpose of which was to build a minimalisti
 ---
 
 ## Functionality 
-- [Front page with the best selling and new products presented]
-- [Hero section with Call To Action]
-- [Footer with various links]
-- [Search functionality]
-- [Categories page]
-- [Administration page]
-- [About page]
-- [Contact page and form]
-- [Add to cart functionality]
-- [Add and delete new product]
+- Front page with the best selling and new products presented
+- Hero section with Call To Action
+- Footer with various links
+- Search functionality
+- Categories page
+- Administration page
+- About page
+- Contact page and form
+- Add to cart functionality
+- Add and delete new product
 
 ---
 
@@ -190,9 +190,10 @@ The project is developed for educational purposes and is not meant for real prod
 
 ## Contact
 
-- AnkanGranero(#https://github.com/AnkanGranero)
-- malpisen(#https://github.com/malpisen)
-- Judy-P-Eldh(#https://github.com/Judy-P-Eldh)
-- gentlelynx(#https://github.com/gentlelynx)
+- [AnkanGranero](#https://github.com/AnkanGranero)
+- [malpisen](#https://github.com/malpisen)
+- [Judy-P-Eldh](#https://github.com/Judy-P-Eldh)
+- [gentlelynx](#https://github.com/gentlelynx)
+
 
 
