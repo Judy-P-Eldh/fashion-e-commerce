@@ -1,6 +1,6 @@
 # E-commerce project in Next.js
 
-A collaborative project where an e-commerce platform was created with the help of Typescript and Next.js, and using the DummyJSON API. The platform presents various products fetched from the API, and allows the user to search for items and browse different item categories. There is also an administration functionality that allows the user to manage existing and add new products. 
+A collaborative project where an e-commerce platform was created with the help of Typescript and Next.js, and using the DummyJSON API. The platform presents various products fetched from the API, and allows the user to search for items and browse different item categories. There is also an administrative feature that allows users to manage existing items and create new ones. 
 
 ---
 
@@ -21,7 +21,7 @@ A collaborative project where an e-commerce platform was created with the help o
 --- 
 
 ## About the project
-This is a collaborative project, the purpose of which was to build a minimalistic e-commerce platform, and to practice working with Agile methods, TypeScript, Next.js and APIs in a group environment.
+This is a collaborative project, with the goal of creating a minimalistic e-commerce platform, and to practice working with Agile methods, TypeScript, Next.js and APIs in a group environment.
 
 ---
 
@@ -190,7 +190,8 @@ The project is developed for educational purposes and is not meant for real prod
 
 ## Contact
 
-- [AnkanGranero](#https://github.com/AnkanGranero)
-- [malpisen](#https://github.com/malpisen)
-- [Judy-P-Eldh](#https://github.com/Judy-P-Eldh)
-- [gentlelynx](#https://github.com/gentlelynx)
+- [AnkanGranero](https://github.com/AnkanGranero)
+- [malpisen](https://github.com/malpisen)
+- [Judy-P-Eldh](https://github.com/Judy-P-Eldh)
+- [gentlelynx](https://github.com/gentlelynx)
+
