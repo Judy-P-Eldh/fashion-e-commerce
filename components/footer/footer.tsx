@@ -59,14 +59,15 @@ export default function Footer() {
           <ul className="flex gap-2 lg:gap-4">
             {socials.map((item) => {
               return (
-                <Link href={item.href} key={item.name}>
-                  <DynamicIcon name={item.name} size={30} strokeWidth={1.5} />
-                </Link>
+                <li key={item.href}>
+                  <Link href={item.href} key={item.name} aria-label={item.name}>
+                    <DynamicIcon name={item.name} size={30} strokeWidth={1.5} />
+                  </Link>
+                </li>
               );
             })}
           </ul>
         </FooterNavColumn>
-
       </section>
     </footer>
   );

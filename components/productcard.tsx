@@ -14,7 +14,7 @@ export default function ProductCard({ product }: { product: Product }) {
           <Image
             className="order-first m-auto"
             src={image}
-            alt={product.title}
+            alt={`Picture of: ,${product.title}`}
             width={400}
             height={400}
           />
