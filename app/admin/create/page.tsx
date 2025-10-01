@@ -1,24 +1,37 @@
+"use client";
 import Form from "next/form";
 import Link from "next/link";
 import toast from "react-hot-toast";
+import { addProduct } from "@/lib/actions";
+import { redirect } from "next/navigation";
 
-export default async function FormInput() {
+export default function FormInput() {
+  async function submitForm(formData: FormData) {
+    const productTitle = formData.get("product-title") as string;
+    const productPrice = formData.get("product-price") as string;
+    const productDesc = formData.get("product-description") as string;
+    const result = await addProduct({
+      productTitle,
+      productPrice,
+      productDesc,
+    });
+    if (result.success) {
+      toast.success(
+        `Added product ${productTitle} with id ${result.product.id}`
+      );
+      redirect("/admin");
+    } else {
+      toast.error(result.error);
+    }
+  }
   return (
     <main className="content-grid">
-        <div className="content-x-small">
-      <h2 className="text-xl font-bold text-center">Add a new item</h2>
-      <Form className="grid" action={submitForm}>
-        <label htmlFor="product-id">ID</label>
-        <input
-          className="input-field mb-5"
-          type="text"
-          name="product-id"
-          id="product-id"
-          placeholder="###"
-        />
+      <h2 className="content-small text-xl font-bold text-center ">Add a new item</h2>
+      <Form className="content-small flex flex-col" action={submitForm}>
         <label htmlFor="product-title">Title</label>
         <input
           className="input-field mb-5"
+          required
           type="text"
           name="product-title"
           id="product-title"
@@ -27,44 +40,30 @@ export default async function FormInput() {
         <label htmlFor="product-price">Price</label>
         <input
           className="input-field mb-5"
+          required
           type="text"
           name="product-price"
           id="product-price"
-          placeholder="20$"
+          placeholder="$20"
         />
         <label htmlFor="product-description">Description</label>
         <textarea
           className="input-field mb-5"
+          required
           rows={10}
           name="product-description"
           id="product-description"
           placeholder="Delicious and nutricious food that any feline companion would enjoy!"
         />
-        <Link
-          className="flex items-center gap-2 text-sm border-1 p-2 my-2 rounded-sm hover:bg-beige-dark"
-          href="/admin"
-        >
-          Cancel
-        </Link>
-        <button
-          className="flex items-center gap-2 text-sm border-1 p-2 my-2 rounded-sm hover:bg-beige-dark"
-          type="submit"
-        >
-          Add new item
-        </button>
+        <div className="flex justify-center gap-4">
+          <Link className="button py-1 px-5 text-lg" href="/admin">
+            Cancel
+          </Link>
+          <button className="button py-1 px-5 text-lg" type="submit">
+            Add new item
+          </button>
+        </div>
       </Form>
-      </div>
     </main>
   );
-}
-
-export async function submitForm(formData: FormData) {
-  "use server";
-
-  const productID = formData.get("product-id");
-  const productTitle = formData.get("product-title");
-  const productPrice = formData.get("product-price");
-  const productDesc = formData.get("product-description");
-
-  console.log(productID, productTitle, productPrice, productDesc);
 }
