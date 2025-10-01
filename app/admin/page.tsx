@@ -1,5 +1,5 @@
-import DeleteButton from "@/components/deleteButton";
-import { fetchProducts } from "@/lib/data/productdata";
+import DeleteButton from "@/components/delete-button";
+import { fetchProducts } from "@/lib/data/product-data";
 import { PlusIcon } from "lucide-react";
 
 export default async function AdminPage() {

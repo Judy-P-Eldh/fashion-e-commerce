@@ -1,6 +1,6 @@
-import { fetchProducts } from "@/lib/data/productdata";
+import { fetchProducts } from "@/lib/data/product-data";
 import Form from "next/form";
-import ProductList from "@/components/productlist";
+import ProductList from "@/components/product-list";
 import SignUpForm from "@/components/sign-up-form";
 
 export default async function Home() {

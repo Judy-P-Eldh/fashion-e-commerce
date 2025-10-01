@@ -1,4 +1,4 @@
-import SearchButton from './searchbutton';
+import SearchButton from './search-button';
 import Form from 'next/form';
  
 export default function Search({ query, btn = true }: { query?: string; btn?: boolean }) {
