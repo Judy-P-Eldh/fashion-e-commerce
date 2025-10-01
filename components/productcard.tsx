@@ -7,7 +7,7 @@ export default function ProductCard({ product }: { product: Product }) {
   const image = product.images[0];
   return (
     // Färgen??
-    <article className="flex flex-col justify-between h-full p-5 rounded-lg border-2 border-dark shadow-lg bg-beige-medium">
+    <article className="flex flex-col justify-between h-full p-5 rounded-lg border-2 border-darkest shadow-lg bg-beige-medium">
       <Link href={`/products/${product.id}`}>
         <div className="grid text-center">
           <h3>{product.title}</h3>

@@ -11,7 +11,7 @@ export default function Pagination({
     <div className="flex gap-4 justify-center">
       {currentPage > 1 && (
         <Link
-          className="p-2 border-2 rounded-sm"
+          className="button py-0 px-5"
           href={`${baseUrl}${separator}page=${currentPage - 1}`}
         >
           Previous
@@ -22,7 +22,7 @@ export default function Pagination({
 
       {currentPage < maxPage && (
         <Link
-          className="p-2 border-2 rounded-sm"
+          className="button py-0 px-5"
           href={`${baseUrl}${separator}page=${currentPage + 1}`}
         >
           Next

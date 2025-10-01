@@ -11,7 +11,7 @@ export default function ProductList({ products }: { products: Product[] }) {
           </li>
         ))
       ) : (
-        <p>Empty</p>
+        <p>No products...</p>
       )}
     </ul>
   );
