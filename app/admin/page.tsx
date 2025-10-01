@@ -1,6 +1,7 @@
 import DeleteButton from "@/components/delete-button";
 import { fetchProducts } from "@/lib/data/product-data";
 import { PlusIcon } from "lucide-react";
+import Link from "next/link"
 
 export default async function AdminPage() {
   const products = await fetchProducts();
@@ -14,10 +15,12 @@ export default async function AdminPage() {
     <main className="content-grid">
       <h2 className="content text-center">Admin page</h2>
       <section className="content-small">
+        <Link href="admin/create">
         <button className="button my-3">
           <PlusIcon />
           Add product
         </button>
+        </Link>
       </section>
 
       {productsArray.length > 0 ? (
