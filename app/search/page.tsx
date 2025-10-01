@@ -26,18 +26,19 @@ export default async function SearchPage({
         <div className="content pt-10">
           <h2 className="text-center">Search results for "{query}"</h2>
           {products.length > 0 ? (
-            <ProductList products={products} />
+            <div>
+              <ProductList products={products} />
+              <div className="content flex gap-4 justify-center">
+                <Pagination
+                  currentPage={pageNum}
+                  maxPage={maxPage}
+                  baseUrl={`/search?query=${query}`}
+                />
+              </div>
+            </div>
           ) : (
-            <p>No products found.</p>
+            <p className="text-center mt-8">No products found.</p>
           )}
-        </div>
-
-        <div className="content flex gap-4 justify-center">
-          <Pagination
-            currentPage={pageNum}
-            maxPage={maxPage}
-            baseUrl={`/search?query=${query}`}
-          />
         </div>
       </section>
     </main>
