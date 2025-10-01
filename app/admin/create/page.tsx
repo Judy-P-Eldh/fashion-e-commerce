@@ -1,4 +1,4 @@
-import Form from "next/form"
+import Form from "next/form";
 import Link from "next/link";
 import toast from 'react-hot-toast';
 
@@ -20,7 +20,7 @@ export default async function FormInput() {
             </Form>
         </main>
     );
-}
+};
 
 export async function submitForm(formData: FormData) {
     "use server"
@@ -31,4 +31,4 @@ export async function submitForm(formData: FormData) {
     const productDesc = formData.get("product-description");
     
     console.log(productID, productTitle, productPrice, productDesc);
-}
+};

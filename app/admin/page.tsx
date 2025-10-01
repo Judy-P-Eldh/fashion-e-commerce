@@ -1,5 +1,5 @@
-import DeleteButton from "@/components/deleteButton";
-import { fetchProducts } from "@/lib/data/productdata";
+import DeleteButton from "@/components/delete-button";
+import { fetchProducts } from "@/lib/data/product-data";
 import { PlusIcon } from "lucide-react";
 
 export default async function AdminPage() {
@@ -13,19 +13,19 @@ export default async function AdminPage() {
   return (
     <main className="content-grid">
       <h2 className="content text-center">Admin page</h2>
-      <section className="content">
-        <button className="flex items-center gap-2 text-sm border-1 p-2 my-2 rounded-sm hover:bg-beige-dark">
+      <section className="content-small">
+        <button className="button my-3">
           <PlusIcon />
           Add product
         </button>
       </section>
 
       {productsArray.length > 0 ? (
-        <ul className="content">
+        <ul className="content-small">
           {productsArray.map((product) => (
             <li
               key={product.id}
-              className="rounded-sm flex items-center justify-between p-2 align-text-bottom nth-[odd]:bg-beige-medium hover:text-red-700"
+              className="rounded-sm flex items-center justify-between p-3 nth-[odd]:bg-beige-medium hover:text-red-700"
             >
               {product.id}, {product.title}
               <DeleteButton id={product.id} />

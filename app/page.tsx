@@ -1,6 +1,7 @@
-import { fetchProducts } from "@/lib/data/productdata";
+import { fetchProducts } from "@/lib/data/product-data";
 import Form from "next/form";
-import ProductList from "@/components/productlist";
+import ProductList from "@/components/product-list";
+import SignUpForm from "@/components/sign-up-form";
 
 export default async function Home() {
   const products = await fetchProducts(20);
@@ -14,16 +15,9 @@ export default async function Home() {
   return (
     <main className="content-grid">
       <section className="full-width inherit grid bg-beige-medium py-10">
-        <Form className="breakout" action="submit">
-          <h2 className="mb-5 font-courier-prime text-xl">
-            Sign up for our newsletter and get 10% off your first order
-          </h2>
-          <label htmlFor="email" className="sr-only">
-            Email
-          </label>
-          <input type="text" className="bg-light" />
-          <button>Sign me up</button>
-        </Form>
+        <div className="content-small">
+          <SignUpForm />
+        </div>
       </section>
 
       <section className="content pt-10">

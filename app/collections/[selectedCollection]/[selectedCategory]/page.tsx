@@ -1,6 +1,6 @@
 import { AllowedCategory } from "@/lib/interfaces/product";
-import { fetchProductsByCategory } from "@/lib/data/productdata";
-import ProductList from "@/components/productlist";
+import { fetchProductsByCategory } from "@/lib/data/product-data";
+import ProductList from "@/components/product-list";
 import Pagination from "@/components/pagination";
 import { categoryLabels } from "@/lib/data/variables";
 

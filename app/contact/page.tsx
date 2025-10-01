@@ -1,7 +1,7 @@
 export default function ContactPage() {
   return (
     <main className="content-grid">
-      <div className="content rounded-2xl bg-light p-8 shadow">
+      <div className="content-x-small rounded-2xl bg-light p-8 shadow">
         <h2>Contact us</h2>
 
         <p>
@@ -15,7 +15,7 @@ export default function ContactPage() {
         <p>Opening hours: Mon-Fri 9am - 5pm</p>
 
         <form>
-          <label htmlFor="name" className="block">
+          <label htmlFor="name" className="block mt-5">
             Name
           </label>
           <input
@@ -24,7 +24,7 @@ export default function ContactPage() {
             name="name"
             placeholder="Full name"
             required
-            className="border w-full"
+            className="input-field w-full"
           />
 
           <label htmlFor="email" className="block">
@@ -36,7 +36,7 @@ export default function ContactPage() {
             name="email"
             placeholder="example@domain.com"
             required
-            className="border w-full"
+            className="input-field w-full"
           />
 
           <label htmlFor="message" className="block">
@@ -48,10 +48,10 @@ export default function ContactPage() {
             rows={5}
             placeholder="Type your message..."
             required
-            className="w-full resize-none border "
+            className="input-field w-full resize-none"
           ></textarea>
 
-          <button type="submit" className="border cursor-pointer">
+          <button type="submit" className="button py-1 px-5 text-lg place-self-center">
             Send
           </button>
         </form>
