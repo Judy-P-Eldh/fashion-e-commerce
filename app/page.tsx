@@ -21,7 +21,7 @@ export default async function Home() {
           <label htmlFor="email" className="sr-only">
             Email
           </label>
-          <input type="text" className="bg-light" />
+          <input type="text" id="email" name="email" className="bg-light" />
           <button>Sign me up</button>
         </Form>
       </section>

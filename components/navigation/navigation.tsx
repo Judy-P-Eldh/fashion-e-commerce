@@ -10,9 +10,9 @@ export default function Navigation() {
         <div className="hidden lg:flex">
           <NavigationLinks />
         </div>
-        <button className="lg:hidden">
+        {/* <button className="lg:hidden">
           <Menu strokeWidth={1.5} size={35} className="h-7" />
-        </button>
+        </button> */}
 
         <div className="flex justify-center items-center">
           <h1 className="text-6xl lg:text-9xl">
@@ -24,21 +24,21 @@ export default function Navigation() {
            lg:flex justify-start lg:flex-row-reverse items-center lg:gap-6"
         >
           <div className="flex items-center gap-2 lg:gap-6 justify-end">
-            <Link href="#">
+            <Link href="#" aria-label="log in">
               {" "}
               <User
                 strokeWidth={1.5}
                 size={35}
                 className="h-7 lg:h-full"
-              ></User>
+              >Log in</User>
             </Link>
-            <Link href="#">
+            <Link href="#" aria-label="shopping bag">
               {" "}
               <ShoppingBag
                 strokeWidth={1.5}
                 size={35}
                 className="h-7 lg:h-full"
-              ></ShoppingBag>
+              >Shopping bag</ShoppingBag>
             </Link>
           </div>
           <div className="col-span-3 flex justify-center">
