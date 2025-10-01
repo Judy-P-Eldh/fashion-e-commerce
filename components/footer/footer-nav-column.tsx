@@ -1,4 +1,4 @@
-// import { Plus } from 'lucide-react';
+import { Plus } from 'lucide-react';
 export default function FooterNavColumn({
   children,
   title,
@@ -15,13 +15,13 @@ export default function FooterNavColumn({
     >
       <h3 className="font-courier-prime lg:mb-6">{title}</h3>
       {children}
-      {/* {extraContent ? (
-        <button>
+      {extraContent ? (
+        <button aria-label='open'>
           <Plus className="lg:hidden"/>
         </button>
       ) : (
         ''
-      )} */}
+      )}
     </nav>
   );
 }
