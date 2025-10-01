@@ -25,9 +25,9 @@ export default function FormInput() {
     }
   }
   return (
-    <main className="content-grid">
-      <h2 className="content-small text-xl font-bold text-center ">Add a new item</h2>
-      <Form className="content-small flex flex-col" action={submitForm}>
+    <main className="content-small">
+      <h2 className="text-xl font-bold text-center ">Add a new item</h2>
+      <Form className="flex flex-col" action={submitForm}>
         <label htmlFor="product-title">Title</label>
         <input
           className="input-field mb-5"
