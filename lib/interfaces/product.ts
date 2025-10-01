@@ -38,3 +38,9 @@ export type AccessoryCategory = (typeof accessoryCategories)[number];
 export type AllowedCategory = (typeof collections)[CollectionKey][number];
 
 export type DeleteResponse = { success: boolean; product?: Product; error?: string };
+
+export type AddProductData = {
+  productTitle: string;
+  productPrice: string;
+  productDesc: string;
+};
