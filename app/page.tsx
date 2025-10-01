@@ -14,15 +14,17 @@ export default async function Home() {
   return (
     <main className="content-grid">
       <section className="full-width inherit grid bg-beige-medium py-10">
-        <Form className="breakout" action="submit">
+        <Form className="content-small" action="submit">
           <h2 className="mb-5 font-courier-prime text-xl">
             Sign up for our newsletter and get 10% off your first order
           </h2>
           <label htmlFor="email" className="sr-only">
             Email
           </label>
-          <input type="text" className="bg-light" />
-          <button>Sign me up</button>
+          <div className="flex gap-4">
+            <input type="text" className="bg-light" />
+            <button className="button p-1 px-2">Sign me up</button>
+          </div>
         </Form>
       </section>
 

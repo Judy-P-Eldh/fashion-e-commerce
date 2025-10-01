@@ -7,10 +7,7 @@ export default function BuyButton({ productName }: { productName: string }) {
     alert(`${productName} added to shopping cart.`);
   }
   return (
-    <button
-      onClick={handleClick}
-      className="flex justify-center gap-3 text-sm border p-2 rounded-sm hover:bg-dark"
-    >
+    <button onClick={handleClick} className="button">
       <ShoppingBagIcon size={20} />
       Add to cart
     </button>
