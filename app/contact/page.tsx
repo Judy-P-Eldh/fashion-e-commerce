@@ -15,7 +15,7 @@ export default function ContactPage() {
         <p>Opening hours: Mon-Fri 9am - 5pm</p>
 
         <form>
-          <label htmlFor="name" className="block">
+          <label htmlFor="name" className="block mt-5">
             Name
           </label>
           <input
@@ -24,7 +24,7 @@ export default function ContactPage() {
             name="name"
             placeholder="Full name"
             required
-            className="border w-full"
+            className="input-field w-full"
           />
 
           <label htmlFor="email" className="block">
@@ -36,7 +36,7 @@ export default function ContactPage() {
             name="email"
             placeholder="example@domain.com"
             required
-            className="border w-full"
+            className="input-field w-full"
           />
 
           <label htmlFor="message" className="block">
@@ -48,10 +48,10 @@ export default function ContactPage() {
             rows={5}
             placeholder="Type your message..."
             required
-            className="w-full resize-none border "
+            className="input-field w-full resize-none"
           ></textarea>
 
-          <button type="submit" className="button py-1">
+          <button type="submit" className="button py-1 px-5 text-lg place-self-center">
             Send
           </button>
         </form>

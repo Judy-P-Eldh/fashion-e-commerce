@@ -27,7 +27,8 @@ export default function SignUpForm() {
           id="email"
           required
           name="email"
-          className="bg-light"
+          placeholder="email@domain.com"
+          className="input-field mb-0 shadow-lg sm:min-w-sm"
         />
         <button type="submit" className="button p-1 px-2">
           Sign me up
