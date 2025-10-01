@@ -15,7 +15,9 @@ export default async function Home() {
   return (
     <main className="content-grid">
       <section className="full-width inherit grid bg-beige-medium py-10">
-        <SignUpForm />
+        <div className="content-small">
+          <SignUpForm />
+        </div>
       </section>
 
       <section className="content pt-10">

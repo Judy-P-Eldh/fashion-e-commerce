@@ -8,28 +8,28 @@ export default async function FormInput() {
       <Form className="grid gap-2" action="/">
         <label htmlFor="product-id">ID</label>
         <input
-          className="border p-2"
+          className="input-field"
           type="text"
           name="product-id"
           placeholder="###"
         />
         <label htmlFor="product-title">Title</label>
         <input
-          className="border p-2"
+          className="input-field"
           type="text"
           name="product-title"
           placeholder="Cat food"
         />
         <label htmlFor="product-price">Price</label>
         <input
-          className="border p-2"
+          className="input-field"
           type="text"
           name="product-price"
           placeholder="20$"
         />
         <label htmlFor="product-description">Description</label>
         <textarea
-          className="border p-2"
+          className="input-field"
           rows={10}
           name="product-description"
           placeholder="Delicious and nutricious food that any feline companion would enjoy!"
