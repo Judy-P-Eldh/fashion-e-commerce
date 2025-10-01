@@ -1,13 +1,16 @@
-'use client';
+"use client";
 
-import Form from 'next/form';
-import toast from 'react-hot-toast';
+import Form from "next/form";
+import toast from "react-hot-toast";
 
 export default function SignUpForm() {
   const addToMailingList = (formData: FormData) => {
-    const email = formData.get('email') as string;
+    const email = formData.get("email") as string;
 
-    toast.success(`Thanks for signing up! Your discount code will be sent to ${email}`, {duration: 4000});
+    toast.success(
+      `Thanks for signing up! Your discount code will be sent to ${email}`,
+      { duration: 4000 }
+    );
   };
 
   return (
@@ -18,8 +21,18 @@ export default function SignUpForm() {
       <label htmlFor="email" className="sr-only">
         Email
       </label>
-      <input type="text" id="email" required name="email" className="bg-light" />
-      <button type="submit">Sign me up</button>
+      <div className="flex gap-4">
+        <input
+          type="text"
+          id="email"
+          required
+          name="email"
+          className="bg-light"
+        />
+        <button type="submit" className="button p-1 px-2">
+          Sign me up
+        </button>
+      </div>
     </Form>
   );
 }
