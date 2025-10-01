@@ -15,7 +15,7 @@ export default function ContactPage() {
         <p>Opening hours: Mon-Fri 9am - 5pm</p>
 
         <form>
-          <label htmlFor="name" className="block">
+          <label htmlFor="name" className="block mt-5">
             Name
           </label>
           <input
