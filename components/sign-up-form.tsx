@@ -18,7 +18,7 @@ export default function SignUpForm() {
       <label htmlFor="email" className="sr-only">
         Email
       </label>
-      <input type="text" required name="email" className="bg-light" />
+      <input type="text" id="email" required name="email" className="bg-light" />
       <button type="submit">Sign me up</button>
     </Form>
   );
