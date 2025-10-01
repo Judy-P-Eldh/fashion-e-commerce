@@ -35,7 +35,7 @@ export default function Footer() {
               <Link href="#">News</Link>
             </li>
             <li>
-              <Link href="#">Accessability</Link>
+              <Link href="#">Accessibility</Link>
             </li>
           </ul>
         </FooterNavColumn>
