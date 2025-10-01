@@ -1,7 +1,7 @@
 import { Product } from "@/lib/interfaces/product";
 import Link from "next/link";
 import Image from "next/image";
-import BuyButton from "./buybutton";
+import BuyButton from "./buy-button";
 
 export default function ProductCard({ product }: { product: Product }) {
   const image = product.images[0];

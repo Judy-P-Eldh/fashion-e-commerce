@@ -1,8 +1,8 @@
 import { Product } from "@/lib/interfaces/product";
-import { fetchProductById } from "@/lib/data/productdata";
+import { fetchProductById } from "@/lib/data/product-data";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import BuyButton from "@/components/buybutton";
+import BuyButton from "@/components/buy-button";
 
 export default async function Page({
   params,

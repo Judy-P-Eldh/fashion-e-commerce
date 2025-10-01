@@ -1,4 +1,4 @@
-import ProductCard from "@/components/productcard";
+import ProductCard from "@/components/product-card";
 import { Product } from "@/lib/interfaces/product";
 
 export default function ProductList({ products }: { products: Product[] }) {

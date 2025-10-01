@@ -110,14 +110,14 @@ npm run dev
 │   │   ├── navigation-link.tsx
 │   │   ├── navigation-links.tsx
 │   │   └── navigation.tsx
-│   ├── buybutton.tsx
-│   ├── deleteButton.tsx
+│   ├── buy-button.tsx
+│   ├── delete-button.tsx
 │   ├── pagination.tsx
-│   ├── productcard.tsx
-│   ├── productlist.tsx
+│   ├── product-card.tsx
+│   ├── product-list.tsx
 │   ├── search.tsx
-│   ├── searchbutton.tsx
-│   └── shoppingcomponent.tsx
+│   ├── search-button.tsx
+│   └── shopping-component.tsx
 └── lib
     ├── actions
     │   └── index.ts

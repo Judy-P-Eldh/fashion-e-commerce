@@ -1,5 +1,5 @@
 'use server';
-import { endpoint } from '@/lib/data/productdata';
+import { endpoint } from '@/lib/data/product-data';
 import { DeleteResponse, Product } from '../interfaces/product';
 
 export async function deleteProduct(id: string): Promise<DeleteResponse> {
