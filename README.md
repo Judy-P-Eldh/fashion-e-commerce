@@ -123,7 +123,7 @@ npm run dev
     │   └── index.ts
     ├── data
     │   ├── productdata.ts
-    │   └── variables.tsx
+    │   └── variables.ts
     └── interfaces
         ├── pagination.ts
         └── product.ts
