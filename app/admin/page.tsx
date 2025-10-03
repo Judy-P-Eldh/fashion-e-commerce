@@ -12,29 +12,31 @@ export default async function AdminPage() {
       ? products.message
       : "Could not load products.";
   return (
-    <main className="content-small">
+    <main className="content-grid">
       <h2 className="text-center">Admin page</h2>
 
-      <Link className="button my-5 place-self-start" href="admin/create">
-        <PlusIcon />
-        Add product
-      </Link>
+      <section className="content-small">
+        <Link className="button my-5 place-self-start" href="admin/create">
+          <PlusIcon />
+          Add product
+        </Link>
 
-      {productsArray.length > 0 ? (
-        <ul className="content-small">
-          {productsArray.map((product) => (
-            <li
-              key={product.id}
-              className="rounded-sm flex items-center justify-between p-3 nth-[odd]:bg-beige-medium hover:text-red-700"
-            >
-              {product.id}, {product.title}
-              <DeleteButton id={product.id} />
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p>{errorMessage}</p>
-      )}
+        {productsArray.length > 0 ? (
+          <ul className="content-small">
+            {productsArray.map((product) => (
+              <li
+                key={product.id}
+                className="rounded-sm flex items-center justify-between p-3 nth-[odd]:bg-beige-medium hover:text-red-700"
+              >
+                {product.id}, {product.title}
+                <DeleteButton id={product.id} />
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p>{errorMessage}</p>
+        )}
+      </section>
     </main>
   );
 }
