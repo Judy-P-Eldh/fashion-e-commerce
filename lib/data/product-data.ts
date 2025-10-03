@@ -2,7 +2,6 @@ import {
   AllowedCategory,
   Product,
   ProductResponse,
-  DeleteResponse,
 } from "../interfaces/product";
 export const endpoint = "https://dummyjson.com/products";
 

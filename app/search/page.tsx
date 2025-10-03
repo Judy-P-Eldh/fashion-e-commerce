@@ -21,26 +21,21 @@ export default async function SearchPage({
   const maxPage = Math.ceil(total / limit);
 
   return (
-    <main>
-      <section className="content-grid">
-        <div className="content pt-10">
-          <h2 className="text-center">Search results for "{query}"</h2>
-          {products.length > 0 ? (
-            <div>
-              <ProductList products={products} />
-              <div className="content flex gap-4 justify-center">
-                <Pagination
-                  currentPage={pageNum}
-                  maxPage={maxPage}
-                  baseUrl={`/search?query=${query}`}
-                />
-              </div>
-            </div>
-          ) : (
-            <p className="text-center mt-8">No products found.</p>
-          )}
-        </div>
-      </section>
-    </main>
+    <section className="content pt-10">
+      <h2 className="text-center">Search results for "{query}"</h2>
+      {products.length > 0 ? (
+        <ProductList products={products} />
+      ) : (
+        <p>No products found.</p>
+      )}
+
+      <div className="flex gap-4 justify-center">
+        <Pagination
+          currentPage={pageNum}
+          maxPage={maxPage}
+          baseUrl={`/search?query=${query}`}
+        />
+      </div>
+    </section>
   );
 }
