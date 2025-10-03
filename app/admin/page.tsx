@@ -13,7 +13,7 @@ export default async function AdminPage() {
       : "Could not load products.";
   return (
     <main className="content-grid">
-      <h2 className="text-center">Admin page</h2>
+      <h2 className="content-small text-center">Admin page</h2>
 
       <section className="content-small">
         <Link className="button my-5 place-self-start" href="admin/create">

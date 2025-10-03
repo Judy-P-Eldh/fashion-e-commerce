@@ -11,8 +11,8 @@ export default async function CollectionPage({
   let { selectedCollection = "women" } = await params;
 
   return (
-    <div className="content-grid content-small mt-5 ">
-      <section className="content-small flex justify-evenly gap-5 flex-wrap uppercase">
+    <main className="content-grid">
+      <section className="content-small flex justify-evenly gap-5 mt-5 flex-wrap uppercase">
         {Object.keys(collections).map((collection) => {
           return (
             <Link key={collection} href={`${collection}`}>
@@ -45,6 +45,6 @@ export default async function CollectionPage({
           );
         })}
       </ul>
-    </div>
+    </main>
   );
 }

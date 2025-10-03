@@ -29,7 +29,7 @@ export default async function CategoryPage({
   const maxPage = Math.ceil(total / limit);
 
   return (
-    <section className="content-grid">
+    <main className="content-grid">
       <div className="content">
         <h2 className="text-center">{categoryLabels[selectedCategory]}</h2>
         {products.length > 0 ? (
@@ -46,6 +46,6 @@ export default async function CategoryPage({
           baseUrl={`/collections/${selectedCollection}/${selectedCategory}`}
         />
       </div>
-    </section>
+    </main>
   );
 }
