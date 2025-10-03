@@ -32,18 +32,19 @@ export default async function CategoryPage({
     <section className="content">
       <h2 className="text-center">{categoryLabels[selectedCategory]}</h2>
       {products.length > 0 ? (
-        <ProductList products={products} />
+        <div>
+          <ProductList products={products} />
+          <div className="content flex gap-4 justify-center">
+            <Pagination
+              currentPage={pageNum}
+              maxPage={maxPage}
+              baseUrl={`/collections/${selectedCollection}/${selectedCategory}`}
+            />
+          </div>
+        </div>
       ) : (
-        <p>No products found.</p>
+        <p className="text-center mt-8">No products found.</p>
       )}
-
-      <div className="flex gap-4 justify-center">
-        <Pagination
-          currentPage={pageNum}
-          maxPage={maxPage}
-          baseUrl={`/collections/${selectedCollection}/${selectedCategory}`}
-        />
-      </div>
     </section>
   );
 }
