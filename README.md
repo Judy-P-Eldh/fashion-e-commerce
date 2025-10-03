@@ -195,3 +195,40 @@ The project is developed for educational purposes and is not meant for real prod
 - [Judy-P-Eldh](https://github.com/Judy-P-Eldh)
 - [gentlelynx](https://github.com/gentlelynx)
 
+## My part in the project
+
+I was working part time in the project. In the start I took the role to make sure the structure of the workflow worked smoothly.
+Thanks to the group membersit was always easy to communicate.
+
+### Technical contribution
+
+* Fetching from the API
+* Admin view
+* Pagination
+* Search function
+* Search page
+* Product card
+* Not found page
+* Accessability
+* Add to cart functionality
+
+#### Techinques
+* Server components
+* Client components
+* Search params
+* Interfaces
+* Fetching
+* Components
+* Forms and use form status
+* Passing data with promises
+
+#### Accessability
+* Wave
+* Lighthouse
+* Manual testing
+* Screen reader
+
+## Future possibilities
+If I were to continue on this project I would prioritize error handling and the function of actually adding products to the cart.
+
+
