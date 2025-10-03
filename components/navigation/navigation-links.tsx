@@ -9,11 +9,10 @@ export default function NavigationLinks() {
     { name: 'Collections', href: '/collections/women' },
     { name: 'SALE', href: '/sale' },
   ];
-
+  
   const isActive = (href: string) => {
-    return pathname === href || pathname.startsWith(href + '/');
-  };
-
+    return pathname === href || pathname.split("/")[1] === href.split("/")[1] //checks if first word after / in href and pathname matches since collections can have different subroutes
+  }
   return (
     <nav className="grid">
       <ul className="flex items-center text-2xl">
