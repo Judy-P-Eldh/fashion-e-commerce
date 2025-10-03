@@ -31,7 +31,7 @@ This is a collaborative project, with the goal of creating a minimalistic e-comm
 - Footer with various links
 - Search functionality
 - Categories page
-- Administration page
+- Administration page (This preview is reached by the login icon in the header)
 - About page
 - Contact page and form
 - Add to cart functionality

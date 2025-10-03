@@ -24,8 +24,7 @@ export default function Navigation() {
            lg:flex justify-start lg:flex-row-reverse items-center lg:gap-6"
         >
           <div className="flex items-center gap-2 lg:gap-6 justify-end">
-            <Link href="#" aria-label="log">
-              {" "}
+            <Link href="/admin" aria-label="log">
               <User
                 strokeWidth={1.5}
                 size={35}
@@ -33,7 +32,6 @@ export default function Navigation() {
               >Log in</User>
             </Link>
             <Link href="#" aria-label="shopping bag">
-              {" "}
               <ShoppingBag
                 strokeWidth={1.5}
                 size={35}
