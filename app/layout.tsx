@@ -3,8 +3,8 @@ import "./globals.css";
 import Navigation from "@/components/navigation/navigation";
 import Footer from "@/components/footer/footer";
 import { Italiana, Courier_Prime } from "next/font/google";
-import { Toaster } from 'react-hot-toast';
- 
+import { Toaster } from "react-hot-toast";
+
 //uppdate when we have a company/brand name
 export const metadata: Metadata = {
   title: "[Brand name] fashion e-commerce",
@@ -31,7 +31,7 @@ export default function RootLayout({
       <body>
         <Toaster />
         <Navigation />
-        {children}
+        <main className="content-grid">{children}</main>
         <Footer />
       </body>
     </html>
