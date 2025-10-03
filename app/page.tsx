@@ -13,7 +13,7 @@ export default async function Home() {
       : "Could not load products.";
 
   return (
-    <main className="content-grid">
+    <>
       <section className="full-width inherit grid bg-beige-medium py-10">
         <div className="content-small">
           <SignUpForm />
@@ -21,7 +21,7 @@ export default async function Home() {
       </section>
 
       <section className="content pt-10">
-        <h2 className="content text-center">Browse our best sellers</h2>
+        <h2 className="text-center">Browse our best sellers</h2>
         {productsArray.length > 0 ? (
           <ProductList products={productsArray.slice(0, 4)} />
         ) : (
@@ -30,13 +30,13 @@ export default async function Home() {
       </section>
 
       <section className="content pt-10">
-        <h2 className="content text-center">News</h2>
+        <h2 className="text-center">News</h2>
         {productsArray.length > 0 ? (
           <ProductList products={productsArray.slice(10, 18)} />
         ) : (
           <p>{errorMessage}</p>
         )}
       </section>
-    </main>
+    </>
   );
 }

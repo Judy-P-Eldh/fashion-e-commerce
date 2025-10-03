@@ -29,23 +29,21 @@ export default async function CategoryPage({
   const maxPage = Math.ceil(total / limit);
 
   return (
-    <main className="content-grid">
-      <div className="content">
-        <h2 className="text-center">{categoryLabels[selectedCategory]}</h2>
-        {products.length > 0 ? (
-          <ProductList products={products} />
-        ) : (
-          <p>No products found.</p>
-        )}
-      </div>
+    <section className="content">
+      <h2 className="text-center">{categoryLabels[selectedCategory]}</h2>
+      {products.length > 0 ? (
+        <ProductList products={products} />
+      ) : (
+        <p>No products found.</p>
+      )}
 
-      <div className="content flex gap-4 justify-center">
+      <div className="flex gap-4 justify-center">
         <Pagination
           currentPage={pageNum}
           maxPage={maxPage}
           baseUrl={`/collections/${selectedCollection}/${selectedCategory}`}
         />
       </div>
-    </main>
+    </section>
   );
 }

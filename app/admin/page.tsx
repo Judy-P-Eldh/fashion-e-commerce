@@ -12,7 +12,7 @@ export default async function AdminPage() {
       ? products.message
       : "Could not load products.";
   return (
-    <main className="content-grid">
+    <>
       <h2 className="content-small text-center">Admin page</h2>
 
       <section className="content-small">
@@ -37,6 +37,6 @@ export default async function AdminPage() {
           <p>{errorMessage}</p>
         )}
       </section>
-    </main>
+    </>
   );
 }

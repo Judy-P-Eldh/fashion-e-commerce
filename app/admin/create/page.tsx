@@ -25,45 +25,43 @@ export default function FormInput() {
     }
   }
   return (
-    <main className="content-grid">
-      <h2 className="content-small text-xl font-bold text-center ">Add a new item</h2>
-      <Form className="content-small flex flex-col" action={submitForm}>
-        <label htmlFor="product-title">Title</label>
-        <input
-          className="input-field mb-5"
-          required
-          type="text"
-          name="product-title"
-          id="product-title"
-          placeholder="Cat food"
-        />
-        <label htmlFor="product-price">Price</label>
-        <input
-          className="input-field mb-5"
-          required
-          type="text"
-          name="product-price"
-          id="product-price"
-          placeholder="$20"
-        />
-        <label htmlFor="product-description">Description</label>
-        <textarea
-          className="input-field mb-5"
-          required
-          rows={10}
-          name="product-description"
-          id="product-description"
-          placeholder="Delicious and nutricious food that any feline companion would enjoy!"
-        />
-        <div className="flex justify-center gap-4">
-          <Link className="button py-1 px-5 text-lg" href="/admin">
-            Cancel
-          </Link>
-          <button className="button py-1 px-5 text-lg" type="submit">
-            Add new item
-          </button>
-        </div>
-      </Form>
-    </main>
+    <Form className="content-small flex flex-col" action={submitForm}>
+      <h2 className="text-xl font-bold text-center mb-5">Add a new item</h2>
+      <label htmlFor="product-title">Title</label>
+      <input
+        className="input-field mb-5"
+        required
+        type="text"
+        name="product-title"
+        id="product-title"
+        placeholder="Cat food"
+      />
+      <label htmlFor="product-price">Price</label>
+      <input
+        className="input-field mb-5"
+        required
+        type="text"
+        name="product-price"
+        id="product-price"
+        placeholder="$20"
+      />
+      <label htmlFor="product-description">Description</label>
+      <textarea
+        className="input-field mb-5"
+        required
+        rows={10}
+        name="product-description"
+        id="product-description"
+        placeholder="Delicious and nutricious food that any feline companion would enjoy!"
+      />
+      <div className="flex justify-center gap-4">
+        <Link className="button py-1 px-5 text-lg" href="/admin">
+          Cancel
+        </Link>
+        <button className="button py-1 px-5 text-lg" type="submit">
+          Add new item
+        </button>
+      </div>
+    </Form>
   );
 }
