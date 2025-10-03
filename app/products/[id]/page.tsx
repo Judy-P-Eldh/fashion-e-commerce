@@ -14,26 +14,24 @@ export default async function Page({
 
   if (!product) notFound();
   return (
-    <main className="content-grid place-self-center">
-      <article className="content-small m-5 grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="flex justify-center">
-          <Image
-            src={product.images[0]}
-            alt={product.title}
-            width={400}
-            height={400}
-            className="rounded-lg object-cover shadow-lg bg-light"
-          />
+    <article className="content-small m-5 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="flex justify-center">
+        <Image
+          src={product.images[0]}
+          alt={product.title}
+          width={400}
+          height={400}
+          className="rounded-lg object-cover shadow-lg bg-light"
+        />
+      </div>
+      <div className="flex flex-col gap-5">
+        <h2 className="font-bold">{product.title}</h2>
+        <p>{product.description}</p>
+        <p className="text-2xl font-bold">${product.price}</p>
+        <div className="flex-start">
+          <BuyButton productName={product.title} />
         </div>
-        <div className="flex flex-col gap-5">
-          <h2 className="font-bold">{product.title}</h2>
-          <p>{product.description}</p>
-          <p className="text-2xl font-bold">${product.price}</p>
-          <div className="flex-start">
-            <BuyButton productName={product.title} />
-          </div>
-        </div>
-      </article>
-    </main>
+      </div>
+    </article>
   );
 }
